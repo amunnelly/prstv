@@ -8,15 +8,13 @@ In Ireland, we pride ourselves on the sophistication of our electoral system. Ir
 
 Or at least that's the theory. The full results of the last two general elections are available on the government's Open Data portal, https://data.gov.ie/, and these suggest that Irish general election are much closer to first-past-the-post elections than we realise, and that transfers are of little impact in general in deciding whom gets elected.
 
-The Data
+## The Data
 
 The General Election of February 26th, 2016, returned 157 TDs from 40 constituencies who, along with the automatically-returned Ceann Comhairle, made up the 32nd Dáil.
 
 The General Election of February 8th, 2020, returned 159 TDs from 39 constituencies. They and the Ceann Comhairle make up the current, 33rd Dáil.
 
-The 
-
-Constituencies
+## The Constituencies
 
 Seats per Constituency per Election
 

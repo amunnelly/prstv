@@ -161,10 +161,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="closer-look.html">A Closer Look at Some Typical Constituencies</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">A Closer Look at Some Atypical Constituencies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="what-does-all-this-mean.html">What Does All This Mean?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="preparing-the-data.html">Structure of data dictionaries</a></li>
-
-
-
+<li class="toctree-l1"><a class="reference internal" href="preparing-the-data.html">The Science Bit</a></li>
 </ul>
 
     </div>
@@ -376,7 +373,12 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="a-closer-look-at-some-atypical-constituencies">
 <h1>A Closer Look at Some Atypical Constituencies<a class="headerlink" href="#a-closer-look-at-some-atypical-constituencies" title="Permalink to this heading">#</a></h1>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
@@ -384,16 +386,28 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span> <span class="n">data</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <p>Identify Elected TDs</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">elected</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="n">notelected</span> <span class="o">=</span> <span class="p">{}</span>
@@ -407,8 +421,14 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">elected_tagger</span><span class="p">(</span><span class="n">someDf</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
@@ -425,8 +445,14 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_count_details</span><span class="p">(</span><span class="n">someDf</span><span class="p">,</span> <span class="n">conNumber</span><span class="p">):</span>
     <span class="n">details</span> <span class="o">=</span> <span class="n">someDf</span><span class="p">[</span><span class="n">someDf</span><span class="p">[</span><span class="s1">&#39;Constituency Number&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">conNumber</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -436,8 +462,14 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">set_categorical_data</span><span class="p">(</span><span class="n">someIndex</span><span class="p">):</span>
     <span class="n">holder</span> <span class="o">=</span> <span class="p">[]</span>
@@ -447,8 +479,14 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prepare_chart_data</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
     <span class="n">holder</span> <span class="o">=</span> <span class="p">[]</span>
@@ -464,8 +502,14 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">charter</span><span class="p">(</span><span class="n">count_details</span><span class="p">):</span>
     <span class="n">chart_data</span> <span class="o">=</span> <span class="n">prepare_chart_data</span><span class="p">(</span><span class="n">count_details</span><span class="p">)</span>
@@ -488,232 +532,239 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <section id="cork-south-west-2020">
 <h2>Cork South West, 2020<a class="headerlink" href="#cork-south-west-2020" title="Permalink to this heading">#</a></h2>
 <p>Social Democrat leader Holly Cairns is the most charismatic politician in the Dáil but she was very lucky to get elected in the first place. In fifth place and over a thousand votes behind third place on the first count, Cairns proved more transfer-friendly than Sinn Féin’s Paul Hayes and saw her move to fourth. Then, on Hayes’s elimination, Cairns got over three thousand of Hayes votes, while Tom Lombard got 393. And that made all the difference.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_details</span> <span class="o">=</span> <span class="n">get_count_details</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">2020</span><span class="p">][</span><span class="s1">&#39;count&#39;</span><span class="p">],</span> <span class="mi">8</span><span class="p">)</span>
 <span class="n">count_details</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">background_gradient</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;RdYlGn&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_8dcfe_row0_col0, #T_8dcfe_row0_col1, #T_8dcfe_row0_col2, #T_8dcfe_row0_col3, #T_8dcfe_row0_col4, #T_8dcfe_row0_col5, #T_8dcfe_row0_col6, #T_8dcfe_row1_col7 {
+#T_d7943_row0_col0, #T_d7943_row0_col1, #T_d7943_row0_col2, #T_d7943_row0_col3, #T_d7943_row0_col4, #T_d7943_row0_col5, #T_d7943_row0_col6, #T_d7943_row1_col7 {
   background-color: #006837;
   color: #f1f1f1;
 }
-#T_8dcfe_row0_col7 {
+#T_d7943_row0_col7 {
   background-color: #04703b;
   color: #f1f1f1;
 }
-#T_8dcfe_row1_col0, #T_8dcfe_row2_col1 {
+#T_d7943_row1_col0, #T_d7943_row2_col1 {
   background-color: #f2faae;
   color: #000000;
 }
-#T_8dcfe_row1_col1 {
+#T_d7943_row1_col1 {
   background-color: #e2f397;
   color: #000000;
 }
-#T_8dcfe_row1_col2 {
+#T_d7943_row1_col2 {
   background-color: #ddf191;
   color: #000000;
 }
-#T_8dcfe_row1_col3, #T_8dcfe_row4_col5 {
+#T_d7943_row1_col3, #T_d7943_row4_col5 {
   background-color: #daf08d;
   color: #000000;
 }
-#T_8dcfe_row1_col4 {
+#T_d7943_row1_col4 {
   background-color: #cbe982;
   color: #000000;
 }
-#T_8dcfe_row1_col5 {
+#T_d7943_row1_col5 {
   background-color: #bfe47a;
   color: #000000;
 }
-#T_8dcfe_row1_col6 {
+#T_d7943_row1_col6 {
   background-color: #128a49;
   color: #f1f1f1;
 }
-#T_8dcfe_row2_col0, #T_8dcfe_row3_col5 {
+#T_d7943_row2_col0, #T_d7943_row3_col5 {
   background-color: #fffebe;
   color: #000000;
 }
-#T_8dcfe_row2_col2, #T_8dcfe_row4_col3 {
+#T_d7943_row2_col2, #T_d7943_row4_col3 {
   background-color: #eff8aa;
   color: #000000;
 }
-#T_8dcfe_row2_col3 {
+#T_d7943_row2_col3 {
   background-color: #e9f6a1;
   color: #000000;
 }
-#T_8dcfe_row2_col4 {
+#T_d7943_row2_col4 {
   background-color: #d7ee8a;
   color: #000000;
 }
-#T_8dcfe_row2_col5 {
+#T_d7943_row2_col5 {
   background-color: #78c565;
   color: #000000;
 }
-#T_8dcfe_row2_col6 {
+#T_d7943_row2_col6 {
   background-color: #54b45f;
   color: #f1f1f1;
 }
-#T_8dcfe_row2_col7 {
+#T_d7943_row2_col7 {
   background-color: #42ac5a;
   color: #f1f1f1;
 }
-#T_8dcfe_row3_col0 {
+#T_d7943_row3_col0 {
   background-color: #fee18d;
   color: #000000;
 }
-#T_8dcfe_row3_col1, #T_8dcfe_row5_col5 {
+#T_d7943_row3_col1, #T_d7943_row5_col5 {
   background-color: #feec9f;
   color: #000000;
 }
-#T_8dcfe_row3_col2 {
+#T_d7943_row3_col2 {
   background-color: #fff2aa;
   color: #000000;
 }
-#T_8dcfe_row3_col3 {
+#T_d7943_row3_col3 {
   background-color: #fff6b0;
   color: #000000;
 }
-#T_8dcfe_row3_col4 {
+#T_d7943_row3_col4 {
   background-color: #fffdbc;
   color: #000000;
 }
-#T_8dcfe_row3_col6 {
+#T_d7943_row3_col6 {
   background-color: #f5fbb2;
   color: #000000;
 }
-#T_8dcfe_row3_col7, #T_8dcfe_row5_col6, #T_8dcfe_row5_col7, #T_8dcfe_row6_col5, #T_8dcfe_row6_col6, #T_8dcfe_row6_col7, #T_8dcfe_row7_col4, #T_8dcfe_row7_col5, #T_8dcfe_row7_col6, #T_8dcfe_row7_col7, #T_8dcfe_row8_col3, #T_8dcfe_row8_col4, #T_8dcfe_row8_col5, #T_8dcfe_row8_col6, #T_8dcfe_row8_col7, #T_8dcfe_row9_col2, #T_8dcfe_row9_col3, #T_8dcfe_row9_col4, #T_8dcfe_row9_col5, #T_8dcfe_row9_col6, #T_8dcfe_row9_col7, #T_8dcfe_row10_col2, #T_8dcfe_row10_col3, #T_8dcfe_row10_col4, #T_8dcfe_row10_col5, #T_8dcfe_row10_col6, #T_8dcfe_row10_col7, #T_8dcfe_row11_col0, #T_8dcfe_row11_col1, #T_8dcfe_row11_col2, #T_8dcfe_row11_col3, #T_8dcfe_row11_col4, #T_8dcfe_row11_col5, #T_8dcfe_row11_col6, #T_8dcfe_row11_col7 {
+#T_d7943_row3_col7, #T_d7943_row5_col6, #T_d7943_row5_col7, #T_d7943_row6_col5, #T_d7943_row6_col6, #T_d7943_row6_col7, #T_d7943_row7_col4, #T_d7943_row7_col5, #T_d7943_row7_col6, #T_d7943_row7_col7, #T_d7943_row8_col3, #T_d7943_row8_col4, #T_d7943_row8_col5, #T_d7943_row8_col6, #T_d7943_row8_col7, #T_d7943_row9_col2, #T_d7943_row9_col3, #T_d7943_row9_col4, #T_d7943_row9_col5, #T_d7943_row9_col6, #T_d7943_row9_col7, #T_d7943_row10_col2, #T_d7943_row10_col3, #T_d7943_row10_col4, #T_d7943_row10_col5, #T_d7943_row10_col6, #T_d7943_row10_col7, #T_d7943_row11_col0, #T_d7943_row11_col1, #T_d7943_row11_col2, #T_d7943_row11_col3, #T_d7943_row11_col4, #T_d7943_row11_col5, #T_d7943_row11_col6, #T_d7943_row11_col7 {
   background-color: #a50026;
   color: #f1f1f1;
 }
-#T_8dcfe_row4_col0 {
+#T_d7943_row4_col0 {
   background-color: #fee08b;
   color: #000000;
 }
-#T_8dcfe_row4_col1 {
+#T_d7943_row4_col1 {
   background-color: #feea9b;
   color: #000000;
 }
-#T_8dcfe_row4_col2 {
+#T_d7943_row4_col2 {
   background-color: #fff0a6;
   color: #000000;
 }
-#T_8dcfe_row4_col4 {
+#T_d7943_row4_col4 {
   background-color: #e5f49b;
   color: #000000;
 }
-#T_8dcfe_row4_col6 {
+#T_d7943_row4_col6 {
   background-color: #c7e77f;
   color: #000000;
 }
-#T_8dcfe_row4_col7 {
+#T_d7943_row4_col7 {
   background-color: #1b9950;
   color: #f1f1f1;
 }
-#T_8dcfe_row5_col0 {
+#T_d7943_row5_col0 {
   background-color: #fdc574;
   color: #000000;
 }
-#T_8dcfe_row5_col1 {
+#T_d7943_row5_col1 {
   background-color: #fed27f;
   color: #000000;
 }
-#T_8dcfe_row5_col2 {
+#T_d7943_row5_col2 {
   background-color: #fed884;
   color: #000000;
 }
-#T_8dcfe_row5_col3 {
+#T_d7943_row5_col3 {
   background-color: #fedc88;
   color: #000000;
 }
-#T_8dcfe_row5_col4 {
+#T_d7943_row5_col4 {
   background-color: #fee999;
   color: #000000;
 }
-#T_8dcfe_row6_col0 {
+#T_d7943_row6_col0 {
   background-color: #f57547;
   color: #f1f1f1;
 }
-#T_8dcfe_row6_col1 {
+#T_d7943_row6_col1 {
   background-color: #f67f4b;
   color: #f1f1f1;
 }
-#T_8dcfe_row6_col2 {
+#T_d7943_row6_col2 {
   background-color: #f7814c;
   color: #f1f1f1;
 }
-#T_8dcfe_row6_col3 {
+#T_d7943_row6_col3 {
   background-color: #f88950;
   color: #f1f1f1;
 }
-#T_8dcfe_row6_col4 {
+#T_d7943_row6_col4 {
   background-color: #f88c51;
   color: #f1f1f1;
 }
-#T_8dcfe_row7_col0 {
+#T_d7943_row7_col0 {
   background-color: #e54e35;
   color: #f1f1f1;
 }
-#T_8dcfe_row7_col1 {
+#T_d7943_row7_col1 {
   background-color: #e95538;
   color: #f1f1f1;
 }
-#T_8dcfe_row7_col2 {
+#T_d7943_row7_col2 {
   background-color: #ed5f3c;
   color: #f1f1f1;
 }
-#T_8dcfe_row7_col3 {
+#T_d7943_row7_col3 {
   background-color: #ee613e;
   color: #f1f1f1;
 }
-#T_8dcfe_row8_col0 {
+#T_d7943_row8_col0 {
   background-color: #e24731;
   color: #f1f1f1;
 }
-#T_8dcfe_row8_col1 {
+#T_d7943_row8_col1 {
   background-color: #e44c34;
   color: #f1f1f1;
 }
-#T_8dcfe_row8_col2 {
+#T_d7943_row8_col2 {
   background-color: #e75337;
   color: #f1f1f1;
 }
-#T_8dcfe_row9_col0 {
+#T_d7943_row9_col0 {
   background-color: #b91326;
   color: #f1f1f1;
 }
-#T_8dcfe_row9_col1 {
+#T_d7943_row9_col1 {
   background-color: #bb1526;
   color: #f1f1f1;
 }
-#T_8dcfe_row10_col0 {
+#T_d7943_row10_col0 {
   background-color: #b50f26;
   color: #f1f1f1;
 }
-#T_8dcfe_row10_col1 {
+#T_d7943_row10_col1 {
   background-color: #b71126;
   color: #f1f1f1;
 }
 </style>
-<table id="T_8dcfe">
+<table id="T_d7943">
   <thead>
     <tr>
       <th class="index_name level0" >Count Number</th>
-      <th id="T_8dcfe_level0_col0" class="col_heading level0 col0" >1</th>
-      <th id="T_8dcfe_level0_col1" class="col_heading level0 col1" >2</th>
-      <th id="T_8dcfe_level0_col2" class="col_heading level0 col2" >3</th>
-      <th id="T_8dcfe_level0_col3" class="col_heading level0 col3" >4</th>
-      <th id="T_8dcfe_level0_col4" class="col_heading level0 col4" >5</th>
-      <th id="T_8dcfe_level0_col5" class="col_heading level0 col5" >6</th>
-      <th id="T_8dcfe_level0_col6" class="col_heading level0 col6" >7</th>
-      <th id="T_8dcfe_level0_col7" class="col_heading level0 col7" >8</th>
+      <th id="T_d7943_level0_col0" class="col_heading level0 col0" >1</th>
+      <th id="T_d7943_level0_col1" class="col_heading level0 col1" >2</th>
+      <th id="T_d7943_level0_col2" class="col_heading level0 col2" >3</th>
+      <th id="T_d7943_level0_col3" class="col_heading level0 col3" >4</th>
+      <th id="T_d7943_level0_col4" class="col_heading level0 col4" >5</th>
+      <th id="T_d7943_level0_col5" class="col_heading level0 col5" >6</th>
+      <th id="T_d7943_level0_col6" class="col_heading level0 col6" >7</th>
+      <th id="T_d7943_level0_col7" class="col_heading level0 col7" >8</th>
     </tr>
     <tr>
       <th class="index_name level0" >Candidate</th>
@@ -729,156 +780,162 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th id="T_8dcfe_level0_row0" class="row_heading level0 row0" >*Michael Collins, NON-P.</th>
-      <td id="T_8dcfe_row0_col0" class="data row0 col0" >11712</td>
-      <td id="T_8dcfe_row0_col1" class="data row0 col1" >11085</td>
-      <td id="T_8dcfe_row0_col2" class="data row0 col2" >11085</td>
-      <td id="T_8dcfe_row0_col3" class="data row0 col3" >11085</td>
-      <td id="T_8dcfe_row0_col4" class="data row0 col4" >11085</td>
-      <td id="T_8dcfe_row0_col5" class="data row0 col5" >11085</td>
-      <td id="T_8dcfe_row0_col6" class="data row0 col6" >11085</td>
-      <td id="T_8dcfe_row0_col7" class="data row0 col7" >11085</td>
+      <th id="T_d7943_level0_row0" class="row_heading level0 row0" >*Michael Collins, NON-P.</th>
+      <td id="T_d7943_row0_col0" class="data row0 col0" >11712</td>
+      <td id="T_d7943_row0_col1" class="data row0 col1" >11085</td>
+      <td id="T_d7943_row0_col2" class="data row0 col2" >11085</td>
+      <td id="T_d7943_row0_col3" class="data row0 col3" >11085</td>
+      <td id="T_d7943_row0_col4" class="data row0 col4" >11085</td>
+      <td id="T_d7943_row0_col5" class="data row0 col5" >11085</td>
+      <td id="T_d7943_row0_col6" class="data row0 col6" >11085</td>
+      <td id="T_d7943_row0_col7" class="data row0 col7" >11085</td>
     </tr>
     <tr>
-      <th id="T_8dcfe_level0_row1" class="row_heading level0 row1" >*Christopher O'Sullivan, F.F.</th>
-      <td id="T_8dcfe_row1_col0" class="data row1 col0" >6262</td>
-      <td id="T_8dcfe_row1_col1" class="data row1 col1" >6400</td>
-      <td id="T_8dcfe_row1_col2" class="data row1 col2" >6503</td>
-      <td id="T_8dcfe_row1_col3" class="data row1 col3" >6602</td>
-      <td id="T_8dcfe_row1_col4" class="data row1 col4" >6960</td>
-      <td id="T_8dcfe_row1_col5" class="data row1 col5" >7228</td>
-      <td id="T_8dcfe_row1_col6" class="data row1 col6" >10273</td>
-      <td id="T_8dcfe_row1_col7" class="data row1 col7" >11262</td>
+      <th id="T_d7943_level0_row1" class="row_heading level0 row1" >*Christopher O'Sullivan, F.F.</th>
+      <td id="T_d7943_row1_col0" class="data row1 col0" >6262</td>
+      <td id="T_d7943_row1_col1" class="data row1 col1" >6400</td>
+      <td id="T_d7943_row1_col2" class="data row1 col2" >6503</td>
+      <td id="T_d7943_row1_col3" class="data row1 col3" >6602</td>
+      <td id="T_d7943_row1_col4" class="data row1 col4" >6960</td>
+      <td id="T_d7943_row1_col5" class="data row1 col5" >7228</td>
+      <td id="T_d7943_row1_col6" class="data row1 col6" >10273</td>
+      <td id="T_d7943_row1_col7" class="data row1 col7" >11262</td>
     </tr>
     <tr>
-      <th id="T_8dcfe_level0_row2" class="row_heading level0 row2" >Tim Lombard, F.G.</th>
-      <td id="T_8dcfe_row2_col0" class="data row2 col0" >5865</td>
-      <td id="T_8dcfe_row2_col1" class="data row2 col1" >5917</td>
-      <td id="T_8dcfe_row2_col2" class="data row2 col2" >5982</td>
-      <td id="T_8dcfe_row2_col3" class="data row2 col3" >6170</td>
-      <td id="T_8dcfe_row2_col4" class="data row2 col4" >6669</td>
-      <td id="T_8dcfe_row2_col5" class="data row2 col5" >8557</td>
-      <td id="T_8dcfe_row2_col6" class="data row2 col6" >9133</td>
-      <td id="T_8dcfe_row2_col7" class="data row2 col7" >9526</td>
+      <th id="T_d7943_level0_row2" class="row_heading level0 row2" >Tim Lombard, F.G.</th>
+      <td id="T_d7943_row2_col0" class="data row2 col0" >5865</td>
+      <td id="T_d7943_row2_col1" class="data row2 col1" >5917</td>
+      <td id="T_d7943_row2_col2" class="data row2 col2" >5982</td>
+      <td id="T_d7943_row2_col3" class="data row2 col3" >6170</td>
+      <td id="T_d7943_row2_col4" class="data row2 col4" >6669</td>
+      <td id="T_d7943_row2_col5" class="data row2 col5" >8557</td>
+      <td id="T_d7943_row2_col6" class="data row2 col6" >9133</td>
+      <td id="T_d7943_row2_col7" class="data row2 col7" >9526</td>
     </tr>
     <tr>
-      <th id="T_8dcfe_level0_row3" class="row_heading level0 row3" >Paul Hayes, S.F.</th>
-      <td id="T_8dcfe_row3_col0" class="data row3 col0" >4777</td>
-      <td id="T_8dcfe_row3_col1" class="data row3 col1" >4881</td>
-      <td id="T_8dcfe_row3_col2" class="data row3 col2" >5075</td>
-      <td id="T_8dcfe_row3_col3" class="data row3 col3" >5229</td>
-      <td id="T_8dcfe_row3_col4" class="data row3 col4" >5462</td>
-      <td id="T_8dcfe_row3_col5" class="data row3 col5" >5542</td>
-      <td id="T_8dcfe_row3_col6" class="data row3 col6" >5832</td>
-      <td id="T_8dcfe_row3_col7" class="data row3 col7" >0</td>
+      <th id="T_d7943_level0_row3" class="row_heading level0 row3" >Paul Hayes, S.F.</th>
+      <td id="T_d7943_row3_col0" class="data row3 col0" >4777</td>
+      <td id="T_d7943_row3_col1" class="data row3 col1" >4881</td>
+      <td id="T_d7943_row3_col2" class="data row3 col2" >5075</td>
+      <td id="T_d7943_row3_col3" class="data row3 col3" >5229</td>
+      <td id="T_d7943_row3_col4" class="data row3 col4" >5462</td>
+      <td id="T_d7943_row3_col5" class="data row3 col5" >5542</td>
+      <td id="T_d7943_row3_col6" class="data row3 col6" >5832</td>
+      <td id="T_d7943_row3_col7" class="data row3 col7" >0</td>
     </tr>
     <tr>
-      <th id="T_8dcfe_level0_row4" class="row_heading level0 row4" >*Holly Cairns, S.D.</th>
-      <td id="T_8dcfe_row4_col0" class="data row4 col0" >4696</td>
-      <td id="T_8dcfe_row4_col1" class="data row4 col1" >4808</td>
-      <td id="T_8dcfe_row4_col2" class="data row4 col2" >5008</td>
-      <td id="T_8dcfe_row4_col3" class="data row4 col3" >5994</td>
-      <td id="T_8dcfe_row4_col4" class="data row4 col4" >6280</td>
-      <td id="T_8dcfe_row4_col5" class="data row4 col5" >6593</td>
-      <td id="T_8dcfe_row4_col6" class="data row4 col6" >7055</td>
-      <td id="T_8dcfe_row4_col7" class="data row4 col7" >10078</td>
+      <th id="T_d7943_level0_row4" class="row_heading level0 row4" >*Holly Cairns, S.D.</th>
+      <td id="T_d7943_row4_col0" class="data row4 col0" >4696</td>
+      <td id="T_d7943_row4_col1" class="data row4 col1" >4808</td>
+      <td id="T_d7943_row4_col2" class="data row4 col2" >5008</td>
+      <td id="T_d7943_row4_col3" class="data row4 col3" >5994</td>
+      <td id="T_d7943_row4_col4" class="data row4 col4" >6280</td>
+      <td id="T_d7943_row4_col5" class="data row4 col5" >6593</td>
+      <td id="T_d7943_row4_col6" class="data row4 col6" >7055</td>
+      <td id="T_d7943_row4_col7" class="data row4 col7" >10078</td>
     </tr>
     <tr>
-      <th id="T_8dcfe_level0_row5" class="row_heading level0 row5" >Margaret Murphy O'Mahony, F.F.</th>
-      <td id="T_8dcfe_row5_col0" class="data row5 col0" >4077</td>
-      <td id="T_8dcfe_row5_col1" class="data row5 col1" >4163</td>
-      <td id="T_8dcfe_row5_col2" class="data row5 col2" >4274</td>
-      <td id="T_8dcfe_row5_col3" class="data row5 col3" >4352</td>
-      <td id="T_8dcfe_row5_col4" class="data row5 col4" >4761</td>
-      <td id="T_8dcfe_row5_col5" class="data row5 col5" >4863</td>
-      <td id="T_8dcfe_row5_col6" class="data row5 col6" >0</td>
-      <td id="T_8dcfe_row5_col7" class="data row5 col7" >0</td>
+      <th id="T_d7943_level0_row5" class="row_heading level0 row5" >Margaret Murphy O'Mahony, F.F.</th>
+      <td id="T_d7943_row5_col0" class="data row5 col0" >4077</td>
+      <td id="T_d7943_row5_col1" class="data row5 col1" >4163</td>
+      <td id="T_d7943_row5_col2" class="data row5 col2" >4274</td>
+      <td id="T_d7943_row5_col3" class="data row5 col3" >4352</td>
+      <td id="T_d7943_row5_col4" class="data row5 col4" >4761</td>
+      <td id="T_d7943_row5_col5" class="data row5 col5" >4863</td>
+      <td id="T_d7943_row5_col6" class="data row5 col6" >0</td>
+      <td id="T_d7943_row5_col7" class="data row5 col7" >0</td>
     </tr>
     <tr>
-      <th id="T_8dcfe_level0_row6" class="row_heading level0 row6" >Karen Coakley, F.G.</th>
-      <td id="T_8dcfe_row6_col0" class="data row6 col0" >2526</td>
-      <td id="T_8dcfe_row6_col1" class="data row6 col1" >2577</td>
-      <td id="T_8dcfe_row6_col2" class="data row6 col2" >2595</td>
-      <td id="T_8dcfe_row6_col3" class="data row6 col3" >2698</td>
-      <td id="T_8dcfe_row6_col4" class="data row6 col4" >2747</td>
-      <td id="T_8dcfe_row6_col5" class="data row6 col5" >0</td>
-      <td id="T_8dcfe_row6_col6" class="data row6 col6" >0</td>
-      <td id="T_8dcfe_row6_col7" class="data row6 col7" >0</td>
+      <th id="T_d7943_level0_row6" class="row_heading level0 row6" >Karen Coakley, F.G.</th>
+      <td id="T_d7943_row6_col0" class="data row6 col0" >2526</td>
+      <td id="T_d7943_row6_col1" class="data row6 col1" >2577</td>
+      <td id="T_d7943_row6_col2" class="data row6 col2" >2595</td>
+      <td id="T_d7943_row6_col3" class="data row6 col3" >2698</td>
+      <td id="T_d7943_row6_col4" class="data row6 col4" >2747</td>
+      <td id="T_d7943_row6_col5" class="data row6 col5" >0</td>
+      <td id="T_d7943_row6_col6" class="data row6 col6" >0</td>
+      <td id="T_d7943_row6_col7" class="data row6 col7" >0</td>
     </tr>
     <tr>
-      <th id="T_8dcfe_level0_row7" class="row_heading level0 row7" >Alan Coleman, NON-P.</th>
-      <td id="T_8dcfe_row7_col0" class="data row7 col0" >1801</td>
-      <td id="T_8dcfe_row7_col1" class="data row7 col1" >1843</td>
-      <td id="T_8dcfe_row7_col2" class="data row7 col2" >1950</td>
-      <td id="T_8dcfe_row7_col3" class="data row7 col3" >2025</td>
-      <td id="T_8dcfe_row7_col4" class="data row7 col4" >0</td>
-      <td id="T_8dcfe_row7_col5" class="data row7 col5" >0</td>
-      <td id="T_8dcfe_row7_col6" class="data row7 col6" >0</td>
-      <td id="T_8dcfe_row7_col7" class="data row7 col7" >0</td>
+      <th id="T_d7943_level0_row7" class="row_heading level0 row7" >Alan Coleman, NON-P.</th>
+      <td id="T_d7943_row7_col0" class="data row7 col0" >1801</td>
+      <td id="T_d7943_row7_col1" class="data row7 col1" >1843</td>
+      <td id="T_d7943_row7_col2" class="data row7 col2" >1950</td>
+      <td id="T_d7943_row7_col3" class="data row7 col3" >2025</td>
+      <td id="T_d7943_row7_col4" class="data row7 col4" >0</td>
+      <td id="T_d7943_row7_col5" class="data row7 col5" >0</td>
+      <td id="T_d7943_row7_col6" class="data row7 col6" >0</td>
+      <td id="T_d7943_row7_col7" class="data row7 col7" >0</td>
     </tr>
     <tr>
-      <th id="T_8dcfe_level0_row8" class="row_heading level0 row8" >Bernadette Connolly, G.P.</th>
-      <td id="T_8dcfe_row8_col0" class="data row8 col0" >1647</td>
-      <td id="T_8dcfe_row8_col1" class="data row8 col1" >1663</td>
-      <td id="T_8dcfe_row8_col2" class="data row8 col2" >1765</td>
-      <td id="T_8dcfe_row8_col3" class="data row8 col3" >0</td>
-      <td id="T_8dcfe_row8_col4" class="data row8 col4" >0</td>
-      <td id="T_8dcfe_row8_col5" class="data row8 col5" >0</td>
-      <td id="T_8dcfe_row8_col6" class="data row8 col6" >0</td>
-      <td id="T_8dcfe_row8_col7" class="data row8 col7" >0</td>
+      <th id="T_d7943_level0_row8" class="row_heading level0 row8" >Bernadette Connolly, G.P.</th>
+      <td id="T_d7943_row8_col0" class="data row8 col0" >1647</td>
+      <td id="T_d7943_row8_col1" class="data row8 col1" >1663</td>
+      <td id="T_d7943_row8_col2" class="data row8 col2" >1765</td>
+      <td id="T_d7943_row8_col3" class="data row8 col3" >0</td>
+      <td id="T_d7943_row8_col4" class="data row8 col4" >0</td>
+      <td id="T_d7943_row8_col5" class="data row8 col5" >0</td>
+      <td id="T_d7943_row8_col6" class="data row8 col6" >0</td>
+      <td id="T_d7943_row8_col7" class="data row8 col7" >0</td>
     </tr>
     <tr>
-      <th id="T_8dcfe_level0_row9" class="row_heading level0 row9" >Mairead Ruane, A.</th>
-      <td id="T_8dcfe_row9_col0" class="data row9 col0" >515</td>
-      <td id="T_8dcfe_row9_col1" class="data row9 col1" >531</td>
-      <td id="T_8dcfe_row9_col2" class="data row9 col2" >0</td>
-      <td id="T_8dcfe_row9_col3" class="data row9 col3" >0</td>
-      <td id="T_8dcfe_row9_col4" class="data row9 col4" >0</td>
-      <td id="T_8dcfe_row9_col5" class="data row9 col5" >0</td>
-      <td id="T_8dcfe_row9_col6" class="data row9 col6" >0</td>
-      <td id="T_8dcfe_row9_col7" class="data row9 col7" >0</td>
+      <th id="T_d7943_level0_row9" class="row_heading level0 row9" >Mairead Ruane, A.</th>
+      <td id="T_d7943_row9_col0" class="data row9 col0" >515</td>
+      <td id="T_d7943_row9_col1" class="data row9 col1" >531</td>
+      <td id="T_d7943_row9_col2" class="data row9 col2" >0</td>
+      <td id="T_d7943_row9_col3" class="data row9 col3" >0</td>
+      <td id="T_d7943_row9_col4" class="data row9 col4" >0</td>
+      <td id="T_d7943_row9_col5" class="data row9 col5" >0</td>
+      <td id="T_d7943_row9_col6" class="data row9 col6" >0</td>
+      <td id="T_d7943_row9_col7" class="data row9 col7" >0</td>
     </tr>
     <tr>
-      <th id="T_8dcfe_level0_row10" class="row_heading level0 row10" >Kevin O'Connor, S.P.B.P.</th>
-      <td id="T_8dcfe_row10_col0" class="data row10 col0" >427</td>
-      <td id="T_8dcfe_row10_col1" class="data row10 col1" >435</td>
-      <td id="T_8dcfe_row10_col2" class="data row10 col2" >0</td>
-      <td id="T_8dcfe_row10_col3" class="data row10 col3" >0</td>
-      <td id="T_8dcfe_row10_col4" class="data row10 col4" >0</td>
-      <td id="T_8dcfe_row10_col5" class="data row10 col5" >0</td>
-      <td id="T_8dcfe_row10_col6" class="data row10 col6" >0</td>
-      <td id="T_8dcfe_row10_col7" class="data row10 col7" >0</td>
+      <th id="T_d7943_level0_row10" class="row_heading level0 row10" >Kevin O'Connor, S.P.B.P.</th>
+      <td id="T_d7943_row10_col0" class="data row10 col0" >427</td>
+      <td id="T_d7943_row10_col1" class="data row10 col1" >435</td>
+      <td id="T_d7943_row10_col2" class="data row10 col2" >0</td>
+      <td id="T_d7943_row10_col3" class="data row10 col3" >0</td>
+      <td id="T_d7943_row10_col4" class="data row10 col4" >0</td>
+      <td id="T_d7943_row10_col5" class="data row10 col5" >0</td>
+      <td id="T_d7943_row10_col6" class="data row10 col6" >0</td>
+      <td id="T_d7943_row10_col7" class="data row10 col7" >0</td>
     </tr>
     <tr>
-      <th id="T_8dcfe_level0_row11" class="row_heading level0 row11" >Sean O'Leary, NON-P.</th>
-      <td id="T_8dcfe_row11_col0" class="data row11 col0" >33</td>
-      <td id="T_8dcfe_row11_col1" class="data row11 col1" >35</td>
-      <td id="T_8dcfe_row11_col2" class="data row11 col2" >0</td>
-      <td id="T_8dcfe_row11_col3" class="data row11 col3" >0</td>
-      <td id="T_8dcfe_row11_col4" class="data row11 col4" >0</td>
-      <td id="T_8dcfe_row11_col5" class="data row11 col5" >0</td>
-      <td id="T_8dcfe_row11_col6" class="data row11 col6" >0</td>
-      <td id="T_8dcfe_row11_col7" class="data row11 col7" >0</td>
+      <th id="T_d7943_level0_row11" class="row_heading level0 row11" >Sean O'Leary, NON-P.</th>
+      <td id="T_d7943_row11_col0" class="data row11 col0" >33</td>
+      <td id="T_d7943_row11_col1" class="data row11 col1" >35</td>
+      <td id="T_d7943_row11_col2" class="data row11 col2" >0</td>
+      <td id="T_d7943_row11_col3" class="data row11 col3" >0</td>
+      <td id="T_d7943_row11_col4" class="data row11 col4" >0</td>
+      <td id="T_d7943_row11_col5" class="data row11 col5" >0</td>
+      <td id="T_d7943_row11_col6" class="data row11 col6" >0</td>
+      <td id="T_d7943_row11_col7" class="data row11 col7" >0</td>
     </tr>
   </tbody>
 </table>
 </div></div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">charter</span><span class="p">(</span><span class="n">count_details</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-aee0fa0414274534bcc6e07cf96b46ef"></div>
+<div id="altair-viz-861adaa2a8604f2e93f0ad8f5ab381bd"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-aee0fa0414274534bcc6e07cf96b46ef") {
-      outputDiv = document.getElementById("altair-viz-aee0fa0414274534bcc6e07cf96b46ef");
+    if (outputDiv.id !== "altair-viz-861adaa2a8604f2e93f0ad8f5ab381bd") {
+      outputDiv = document.getElementById("altair-viz-861adaa2a8604f2e93f0ad8f5ab381bd");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -931,184 +988,190 @@ document.write(`
 <section id="galway-east-2020">
 <h2>Galway East, 2020<a class="headerlink" href="#galway-east-2020" title="Permalink to this heading">#</a></h2>
 <p>Sinn Féin’s Louis O’Hara is one of only three candidates in the 2020 General Election to come second in first-preference voting and yet not be elected. How did that happen? It happened because Anne Rabbitte benefitted from a strong FF transfer on Donagh Mark Killelea’s elimination after the fifth count, and Ciaran Cannon from a strong FG transfer on elimination of Peter Roche on the sixth count. Also, Mr O’Hara is only 21, which is a very, very young age for someone running for the Dáil. Louis O’Hara’s loss was, I would argue, as anomalous as Holly Cairns’s win.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_details</span> <span class="o">=</span> <span class="n">get_count_details</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">2020</span><span class="p">][</span><span class="s1">&#39;count&#39;</span><span class="p">],</span> <span class="mi">22</span><span class="p">)</span>
 <span class="n">count_details</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">background_gradient</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;RdYlGn&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_f6f6c_row0_col0, #T_f6f6c_row0_col1, #T_f6f6c_row0_col2, #T_f6f6c_row0_col3, #T_f6f6c_row0_col4, #T_f6f6c_row0_col5, #T_f6f6c_row0_col6, #T_f6f6c_row2_col7 {
+#T_11b77_row0_col0, #T_11b77_row0_col1, #T_11b77_row0_col2, #T_11b77_row0_col3, #T_11b77_row0_col4, #T_11b77_row0_col5, #T_11b77_row0_col6, #T_11b77_row2_col7 {
   background-color: #006837;
   color: #f1f1f1;
 }
-#T_f6f6c_row0_col7 {
+#T_11b77_row0_col7 {
   background-color: #06733d;
   color: #f1f1f1;
 }
-#T_f6f6c_row1_col0, #T_f6f6c_row1_col1 {
+#T_11b77_row1_col0, #T_11b77_row1_col1 {
   background-color: #17934e;
   color: #f1f1f1;
 }
-#T_f6f6c_row1_col2 {
+#T_11b77_row1_col2 {
   background-color: #1b9950;
   color: #f1f1f1;
 }
-#T_f6f6c_row1_col3, #T_f6f6c_row4_col7 {
+#T_11b77_row1_col3, #T_11b77_row4_col7 {
   background-color: #148e4b;
   color: #f1f1f1;
 }
-#T_f6f6c_row1_col4 {
+#T_11b77_row1_col4 {
   background-color: #0a7b41;
   color: #f1f1f1;
 }
-#T_f6f6c_row1_col5, #T_f6f6c_row1_col7 {
+#T_11b77_row1_col5, #T_11b77_row1_col7 {
   background-color: #219c52;
   color: #f1f1f1;
 }
-#T_f6f6c_row1_col6, #T_f6f6c_row3_col1 {
+#T_11b77_row1_col6, #T_11b77_row3_col1 {
   background-color: #7dc765;
   color: #000000;
 }
-#T_f6f6c_row2_col0 {
+#T_11b77_row2_col0 {
   background-color: #63bc62;
   color: #f1f1f1;
 }
-#T_f6f6c_row2_col1 {
+#T_11b77_row2_col1 {
   background-color: #66bd63;
   color: #f1f1f1;
 }
-#T_f6f6c_row2_col2, #T_f6f6c_row4_col6 {
+#T_11b77_row2_col2, #T_11b77_row4_col6 {
   background-color: #75c465;
   color: #000000;
 }
-#T_f6f6c_row2_col3 {
+#T_11b77_row2_col3 {
   background-color: #70c164;
   color: #000000;
 }
-#T_f6f6c_row2_col4 {
+#T_11b77_row2_col4 {
   background-color: #5db961;
   color: #f1f1f1;
 }
-#T_f6f6c_row2_col5 {
+#T_11b77_row2_col5 {
   background-color: #84ca66;
   color: #000000;
 }
-#T_f6f6c_row2_col6 {
+#T_11b77_row2_col6 {
   background-color: #5ab760;
   color: #f1f1f1;
 }
-#T_f6f6c_row3_col0 {
+#T_11b77_row3_col0 {
   background-color: #7ac665;
   color: #000000;
 }
-#T_f6f6c_row3_col2 {
+#T_11b77_row3_col2 {
   background-color: #87cb67;
   color: #000000;
 }
-#T_f6f6c_row3_col3 {
+#T_11b77_row3_col3 {
   background-color: #8ccd67;
   color: #000000;
 }
-#T_f6f6c_row3_col4 {
+#T_11b77_row3_col4 {
   background-color: #93d168;
   color: #000000;
 }
-#T_f6f6c_row3_col5 {
+#T_11b77_row3_col5 {
   background-color: #a2d76a;
   color: #000000;
 }
-#T_f6f6c_row3_col6, #T_f6f6c_row3_col7, #T_f6f6c_row5_col5, #T_f6f6c_row5_col6, #T_f6f6c_row5_col7, #T_f6f6c_row6_col4, #T_f6f6c_row6_col5, #T_f6f6c_row6_col6, #T_f6f6c_row6_col7, #T_f6f6c_row7_col3, #T_f6f6c_row7_col4, #T_f6f6c_row7_col5, #T_f6f6c_row7_col6, #T_f6f6c_row7_col7, #T_f6f6c_row8_col3, #T_f6f6c_row8_col4, #T_f6f6c_row8_col5, #T_f6f6c_row8_col6, #T_f6f6c_row8_col7, #T_f6f6c_row9_col2, #T_f6f6c_row9_col3, #T_f6f6c_row9_col4, #T_f6f6c_row9_col5, #T_f6f6c_row9_col6, #T_f6f6c_row9_col7, #T_f6f6c_row10_col1, #T_f6f6c_row10_col2, #T_f6f6c_row10_col3, #T_f6f6c_row10_col4, #T_f6f6c_row10_col5, #T_f6f6c_row10_col6, #T_f6f6c_row10_col7, #T_f6f6c_row11_col0, #T_f6f6c_row11_col1, #T_f6f6c_row11_col2, #T_f6f6c_row11_col3, #T_f6f6c_row11_col4, #T_f6f6c_row11_col5, #T_f6f6c_row11_col6, #T_f6f6c_row11_col7 {
+#T_11b77_row3_col6, #T_11b77_row3_col7, #T_11b77_row5_col5, #T_11b77_row5_col6, #T_11b77_row5_col7, #T_11b77_row6_col4, #T_11b77_row6_col5, #T_11b77_row6_col6, #T_11b77_row6_col7, #T_11b77_row7_col3, #T_11b77_row7_col4, #T_11b77_row7_col5, #T_11b77_row7_col6, #T_11b77_row7_col7, #T_11b77_row8_col3, #T_11b77_row8_col4, #T_11b77_row8_col5, #T_11b77_row8_col6, #T_11b77_row8_col7, #T_11b77_row9_col2, #T_11b77_row9_col3, #T_11b77_row9_col4, #T_11b77_row9_col5, #T_11b77_row9_col6, #T_11b77_row9_col7, #T_11b77_row10_col1, #T_11b77_row10_col2, #T_11b77_row10_col3, #T_11b77_row10_col4, #T_11b77_row10_col5, #T_11b77_row10_col6, #T_11b77_row10_col7, #T_11b77_row11_col0, #T_11b77_row11_col1, #T_11b77_row11_col2, #T_11b77_row11_col3, #T_11b77_row11_col4, #T_11b77_row11_col5, #T_11b77_row11_col6, #T_11b77_row11_col7 {
   background-color: #a50026;
   color: #f1f1f1;
 }
-#T_f6f6c_row4_col0, #T_f6f6c_row4_col1 {
+#T_11b77_row4_col0, #T_11b77_row4_col1 {
   background-color: #91d068;
   color: #000000;
 }
-#T_f6f6c_row4_col2, #T_f6f6c_row4_col3 {
+#T_11b77_row4_col2, #T_11b77_row4_col3 {
   background-color: #9dd569;
   color: #000000;
 }
-#T_f6f6c_row4_col4 {
+#T_11b77_row4_col4 {
   background-color: #a7d96b;
   color: #000000;
 }
-#T_f6f6c_row4_col5 {
+#T_11b77_row4_col5 {
   background-color: #2aa054;
   color: #f1f1f1;
 }
-#T_f6f6c_row5_col0, #T_f6f6c_row5_col1 {
+#T_11b77_row5_col0, #T_11b77_row5_col1 {
   background-color: #cbe982;
   color: #000000;
 }
-#T_f6f6c_row5_col2 {
+#T_11b77_row5_col2 {
   background-color: #d1ec86;
   color: #000000;
 }
-#T_f6f6c_row5_col3 {
+#T_11b77_row5_col3 {
   background-color: #d5ed88;
   color: #000000;
 }
-#T_f6f6c_row5_col4 {
+#T_11b77_row5_col4 {
   background-color: #ddf191;
   color: #000000;
 }
-#T_f6f6c_row6_col0 {
+#T_11b77_row6_col0 {
   background-color: #f7814c;
   color: #f1f1f1;
 }
-#T_f6f6c_row6_col1, #T_f6f6c_row6_col2 {
+#T_11b77_row6_col1, #T_11b77_row6_col2 {
   background-color: #f88950;
   color: #f1f1f1;
 }
-#T_f6f6c_row6_col3 {
+#T_11b77_row6_col3 {
   background-color: #fdb768;
   color: #000000;
 }
-#T_f6f6c_row7_col0 {
+#T_11b77_row7_col0 {
   background-color: #d42d27;
   color: #f1f1f1;
 }
-#T_f6f6c_row7_col1, #T_f6f6c_row7_col2 {
+#T_11b77_row7_col1, #T_11b77_row7_col2 {
   background-color: #da362a;
   color: #f1f1f1;
 }
-#T_f6f6c_row8_col0 {
+#T_11b77_row8_col0 {
   background-color: #d22b27;
   color: #f1f1f1;
 }
-#T_f6f6c_row8_col1, #T_f6f6c_row8_col2 {
+#T_11b77_row8_col1, #T_11b77_row8_col2 {
   background-color: #d93429;
   color: #f1f1f1;
 }
-#T_f6f6c_row9_col0 {
+#T_11b77_row9_col0 {
   background-color: #c21c27;
   color: #f1f1f1;
 }
-#T_f6f6c_row9_col1 {
+#T_11b77_row9_col1 {
   background-color: #ce2827;
   color: #f1f1f1;
 }
-#T_f6f6c_row10_col0 {
+#T_11b77_row10_col0 {
   background-color: #ab0626;
   color: #f1f1f1;
 }
 </style>
-<table id="T_f6f6c">
+<table id="T_11b77">
   <thead>
     <tr>
       <th class="index_name level0" >Count Number</th>
-      <th id="T_f6f6c_level0_col0" class="col_heading level0 col0" >1</th>
-      <th id="T_f6f6c_level0_col1" class="col_heading level0 col1" >2</th>
-      <th id="T_f6f6c_level0_col2" class="col_heading level0 col2" >3</th>
-      <th id="T_f6f6c_level0_col3" class="col_heading level0 col3" >4</th>
-      <th id="T_f6f6c_level0_col4" class="col_heading level0 col4" >5</th>
-      <th id="T_f6f6c_level0_col5" class="col_heading level0 col5" >6</th>
-      <th id="T_f6f6c_level0_col6" class="col_heading level0 col6" >7</th>
-      <th id="T_f6f6c_level0_col7" class="col_heading level0 col7" >8</th>
+      <th id="T_11b77_level0_col0" class="col_heading level0 col0" >1</th>
+      <th id="T_11b77_level0_col1" class="col_heading level0 col1" >2</th>
+      <th id="T_11b77_level0_col2" class="col_heading level0 col2" >3</th>
+      <th id="T_11b77_level0_col3" class="col_heading level0 col3" >4</th>
+      <th id="T_11b77_level0_col4" class="col_heading level0 col4" >5</th>
+      <th id="T_11b77_level0_col5" class="col_heading level0 col5" >6</th>
+      <th id="T_11b77_level0_col6" class="col_heading level0 col6" >7</th>
+      <th id="T_11b77_level0_col7" class="col_heading level0 col7" >8</th>
     </tr>
     <tr>
       <th class="index_name level0" >Candidate</th>
@@ -1124,156 +1187,162 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th id="T_f6f6c_level0_row0" class="row_heading level0 row0" >*Seán CANNEY, NON-P.</th>
-      <td id="T_f6f6c_row0_col0" class="data row0 col0" >7815</td>
-      <td id="T_f6f6c_row0_col1" class="data row0 col1" >7894</td>
-      <td id="T_f6f6c_row0_col2" class="data row0 col2" >8142</td>
-      <td id="T_f6f6c_row0_col3" class="data row0 col3" >8331</td>
-      <td id="T_f6f6c_row0_col4" class="data row0 col4" >8785</td>
-      <td id="T_f6f6c_row0_col5" class="data row0 col5" >9896</td>
-      <td id="T_f6f6c_row0_col6" class="data row0 col6" >12292</td>
-      <td id="T_f6f6c_row0_col7" class="data row0 col7" >10631</td>
+      <th id="T_11b77_level0_row0" class="row_heading level0 row0" >*Seán CANNEY, NON-P.</th>
+      <td id="T_11b77_row0_col0" class="data row0 col0" >7815</td>
+      <td id="T_11b77_row0_col1" class="data row0 col1" >7894</td>
+      <td id="T_11b77_row0_col2" class="data row0 col2" >8142</td>
+      <td id="T_11b77_row0_col3" class="data row0 col3" >8331</td>
+      <td id="T_11b77_row0_col4" class="data row0 col4" >8785</td>
+      <td id="T_11b77_row0_col5" class="data row0 col5" >9896</td>
+      <td id="T_11b77_row0_col6" class="data row0 col6" >12292</td>
+      <td id="T_11b77_row0_col7" class="data row0 col7" >10631</td>
     </tr>
     <tr>
-      <th id="T_f6f6c_level0_row1" class="row_heading level0 row1" >Louis O'HARA, S.F.</th>
-      <td id="T_f6f6c_row1_col0" class="data row1 col0" >7108</td>
-      <td id="T_f6f6c_row1_col1" class="data row1 col1" >7177</td>
-      <td id="T_f6f6c_row1_col2" class="data row1 col2" >7294</td>
-      <td id="T_f6f6c_row1_col3" class="data row1 col3" >7649</td>
-      <td id="T_f6f6c_row1_col4" class="data row1 col4" >8441</td>
-      <td id="T_f6f6c_row1_col5" class="data row1 col5" >8799</td>
-      <td id="T_f6f6c_row1_col6" class="data row1 col6" >9411</td>
-      <td id="T_f6f6c_row1_col7" class="data row1 col7" >9685</td>
+      <th id="T_11b77_level0_row1" class="row_heading level0 row1" >Louis O'HARA, S.F.</th>
+      <td id="T_11b77_row1_col0" class="data row1 col0" >7108</td>
+      <td id="T_11b77_row1_col1" class="data row1 col1" >7177</td>
+      <td id="T_11b77_row1_col2" class="data row1 col2" >7294</td>
+      <td id="T_11b77_row1_col3" class="data row1 col3" >7649</td>
+      <td id="T_11b77_row1_col4" class="data row1 col4" >8441</td>
+      <td id="T_11b77_row1_col5" class="data row1 col5" >8799</td>
+      <td id="T_11b77_row1_col6" class="data row1 col6" >9411</td>
+      <td id="T_11b77_row1_col7" class="data row1 col7" >9685</td>
     </tr>
     <tr>
-      <th id="T_f6f6c_level0_row2" class="row_heading level0 row2" >*Ciaran CANNON, F.G.</th>
-      <td id="T_f6f6c_row2_col0" class="data row2 col0" >6298</td>
-      <td id="T_f6f6c_row2_col1" class="data row2 col1" >6307</td>
-      <td id="T_f6f6c_row2_col2" class="data row2 col2" >6326</td>
-      <td id="T_f6f6c_row2_col3" class="data row2 col3" >6536</td>
-      <td id="T_f6f6c_row2_col4" class="data row2 col4" >7114</td>
-      <td id="T_f6f6c_row2_col5" class="data row2 col5" >7425</td>
-      <td id="T_f6f6c_row2_col6" class="data row2 col6" >9990</td>
-      <td id="T_f6f6c_row2_col7" class="data row2 col7" >10890</td>
+      <th id="T_11b77_level0_row2" class="row_heading level0 row2" >*Ciaran CANNON, F.G.</th>
+      <td id="T_11b77_row2_col0" class="data row2 col0" >6298</td>
+      <td id="T_11b77_row2_col1" class="data row2 col1" >6307</td>
+      <td id="T_11b77_row2_col2" class="data row2 col2" >6326</td>
+      <td id="T_11b77_row2_col3" class="data row2 col3" >6536</td>
+      <td id="T_11b77_row2_col4" class="data row2 col4" >7114</td>
+      <td id="T_11b77_row2_col5" class="data row2 col5" >7425</td>
+      <td id="T_11b77_row2_col6" class="data row2 col6" >9990</td>
+      <td id="T_11b77_row2_col7" class="data row2 col7" >10890</td>
     </tr>
     <tr>
-      <th id="T_f6f6c_level0_row3" class="row_heading level0 row3" >Peter ROCHE, F.G.</th>
-      <td id="T_f6f6c_row3_col0" class="data row3 col0" >6034</td>
-      <td id="T_f6f6c_row3_col1" class="data row3 col1" >6040</td>
-      <td id="T_f6f6c_row3_col2" class="data row3 col2" >6090</td>
-      <td id="T_f6f6c_row3_col3" class="data row3 col3" >6180</td>
-      <td id="T_f6f6c_row3_col4" class="data row3 col4" >6392</td>
-      <td id="T_f6f6c_row3_col5" class="data row3 col5" >6973</td>
-      <td id="T_f6f6c_row3_col6" class="data row3 col6" >0</td>
-      <td id="T_f6f6c_row3_col7" class="data row3 col7" >0</td>
+      <th id="T_11b77_level0_row3" class="row_heading level0 row3" >Peter ROCHE, F.G.</th>
+      <td id="T_11b77_row3_col0" class="data row3 col0" >6034</td>
+      <td id="T_11b77_row3_col1" class="data row3 col1" >6040</td>
+      <td id="T_11b77_row3_col2" class="data row3 col2" >6090</td>
+      <td id="T_11b77_row3_col3" class="data row3 col3" >6180</td>
+      <td id="T_11b77_row3_col4" class="data row3 col4" >6392</td>
+      <td id="T_11b77_row3_col5" class="data row3 col5" >6973</td>
+      <td id="T_11b77_row3_col6" class="data row3 col6" >0</td>
+      <td id="T_11b77_row3_col7" class="data row3 col7" >0</td>
     </tr>
     <tr>
-      <th id="T_f6f6c_level0_row4" class="row_heading level0 row4" >*Anne RABBITTE, F.F.</th>
-      <td id="T_f6f6c_row4_col0" class="data row4 col0" >5762</td>
-      <td id="T_f6f6c_row4_col1" class="data row4 col1" >5776</td>
-      <td id="T_f6f6c_row4_col2" class="data row4 col2" >5820</td>
-      <td id="T_f6f6c_row4_col3" class="data row4 col3" >5943</td>
-      <td id="T_f6f6c_row4_col4" class="data row4 col4" >6121</td>
-      <td id="T_f6f6c_row4_col5" class="data row4 col5" >8676</td>
-      <td id="T_f6f6c_row4_col6" class="data row4 col6" >9535</td>
-      <td id="T_f6f6c_row4_col7" class="data row4 col7" >10022</td>
+      <th id="T_11b77_level0_row4" class="row_heading level0 row4" >*Anne RABBITTE, F.F.</th>
+      <td id="T_11b77_row4_col0" class="data row4 col0" >5762</td>
+      <td id="T_11b77_row4_col1" class="data row4 col1" >5776</td>
+      <td id="T_11b77_row4_col2" class="data row4 col2" >5820</td>
+      <td id="T_11b77_row4_col3" class="data row4 col3" >5943</td>
+      <td id="T_11b77_row4_col4" class="data row4 col4" >6121</td>
+      <td id="T_11b77_row4_col5" class="data row4 col5" >8676</td>
+      <td id="T_11b77_row4_col6" class="data row4 col6" >9535</td>
+      <td id="T_11b77_row4_col7" class="data row4 col7" >10022</td>
     </tr>
     <tr>
-      <th id="T_f6f6c_level0_row5" class="row_heading level0 row5" >Donagh Mark KILLILEA, F.F.</th>
-      <td id="T_f6f6c_row5_col0" class="data row5 col0" >4932</td>
-      <td id="T_f6f6c_row5_col1" class="data row5 col1" >4946</td>
-      <td id="T_f6f6c_row5_col2" class="data row5 col2" >5004</td>
-      <td id="T_f6f6c_row5_col3" class="data row5 col3" >5066</td>
-      <td id="T_f6f6c_row5_col4" class="data row5 col4" >5171</td>
-      <td id="T_f6f6c_row5_col5" class="data row5 col5" >0</td>
-      <td id="T_f6f6c_row5_col6" class="data row5 col6" >0</td>
-      <td id="T_f6f6c_row5_col7" class="data row5 col7" >0</td>
+      <th id="T_11b77_level0_row5" class="row_heading level0 row5" >Donagh Mark KILLILEA, F.F.</th>
+      <td id="T_11b77_row5_col0" class="data row5 col0" >4932</td>
+      <td id="T_11b77_row5_col1" class="data row5 col1" >4946</td>
+      <td id="T_11b77_row5_col2" class="data row5 col2" >5004</td>
+      <td id="T_11b77_row5_col3" class="data row5 col3" >5066</td>
+      <td id="T_11b77_row5_col4" class="data row5 col4" >5171</td>
+      <td id="T_11b77_row5_col5" class="data row5 col5" >0</td>
+      <td id="T_11b77_row5_col6" class="data row5 col6" >0</td>
+      <td id="T_11b77_row5_col7" class="data row5 col7" >0</td>
     </tr>
     <tr>
-      <th id="T_f6f6c_level0_row6" class="row_heading level0 row6" >Eoin MADDEN, G.P.</th>
-      <td id="T_f6f6c_row6_col0" class="data row6 col0" >1924</td>
-      <td id="T_f6f6c_row6_col1" class="data row6 col1" >1942</td>
-      <td id="T_f6f6c_row6_col2" class="data row6 col2" >1977</td>
-      <td id="T_f6f6c_row6_col3" class="data row6 col3" >2647</td>
-      <td id="T_f6f6c_row6_col4" class="data row6 col4" >0</td>
-      <td id="T_f6f6c_row6_col5" class="data row6 col5" >0</td>
-      <td id="T_f6f6c_row6_col6" class="data row6 col6" >0</td>
-      <td id="T_f6f6c_row6_col7" class="data row6 col7" >0</td>
+      <th id="T_11b77_level0_row6" class="row_heading level0 row6" >Eoin MADDEN, G.P.</th>
+      <td id="T_11b77_row6_col0" class="data row6 col0" >1924</td>
+      <td id="T_11b77_row6_col1" class="data row6 col1" >1942</td>
+      <td id="T_11b77_row6_col2" class="data row6 col2" >1977</td>
+      <td id="T_11b77_row6_col3" class="data row6 col3" >2647</td>
+      <td id="T_11b77_row6_col4" class="data row6 col4" >0</td>
+      <td id="T_11b77_row6_col5" class="data row6 col5" >0</td>
+      <td id="T_11b77_row6_col6" class="data row6 col6" >0</td>
+      <td id="T_11b77_row6_col7" class="data row6 col7" >0</td>
     </tr>
     <tr>
-      <th id="T_f6f6c_level0_row7" class="row_heading level0 row7" >Peter REID, S.D.</th>
-      <td id="T_f6f6c_row7_col0" class="data row7 col0" >848</td>
-      <td id="T_f6f6c_row7_col1" class="data row7 col1" >867</td>
-      <td id="T_f6f6c_row7_col2" class="data row7 col2" >892</td>
-      <td id="T_f6f6c_row7_col3" class="data row7 col3" >0</td>
-      <td id="T_f6f6c_row7_col4" class="data row7 col4" >0</td>
-      <td id="T_f6f6c_row7_col5" class="data row7 col5" >0</td>
-      <td id="T_f6f6c_row7_col6" class="data row7 col6" >0</td>
-      <td id="T_f6f6c_row7_col7" class="data row7 col7" >0</td>
+      <th id="T_11b77_level0_row7" class="row_heading level0 row7" >Peter REID, S.D.</th>
+      <td id="T_11b77_row7_col0" class="data row7 col0" >848</td>
+      <td id="T_11b77_row7_col1" class="data row7 col1" >867</td>
+      <td id="T_11b77_row7_col2" class="data row7 col2" >892</td>
+      <td id="T_11b77_row7_col3" class="data row7 col3" >0</td>
+      <td id="T_11b77_row7_col4" class="data row7 col4" >0</td>
+      <td id="T_11b77_row7_col5" class="data row7 col5" >0</td>
+      <td id="T_11b77_row7_col6" class="data row7 col6" >0</td>
+      <td id="T_11b77_row7_col7" class="data row7 col7" >0</td>
     </tr>
     <tr>
-      <th id="T_f6f6c_level0_row8" class="row_heading level0 row8" >Marian SPELMAN, LAB.</th>
-      <td id="T_f6f6c_row8_col0" class="data row8 col0" >845</td>
-      <td id="T_f6f6c_row8_col1" class="data row8 col1" >863</td>
-      <td id="T_f6f6c_row8_col2" class="data row8 col2" >890</td>
-      <td id="T_f6f6c_row8_col3" class="data row8 col3" >0</td>
-      <td id="T_f6f6c_row8_col4" class="data row8 col4" >0</td>
-      <td id="T_f6f6c_row8_col5" class="data row8 col5" >0</td>
-      <td id="T_f6f6c_row8_col6" class="data row8 col6" >0</td>
-      <td id="T_f6f6c_row8_col7" class="data row8 col7" >0</td>
+      <th id="T_11b77_level0_row8" class="row_heading level0 row8" >Marian SPELMAN, LAB.</th>
+      <td id="T_11b77_row8_col0" class="data row8 col0" >845</td>
+      <td id="T_11b77_row8_col1" class="data row8 col1" >863</td>
+      <td id="T_11b77_row8_col2" class="data row8 col2" >890</td>
+      <td id="T_11b77_row8_col3" class="data row8 col3" >0</td>
+      <td id="T_11b77_row8_col4" class="data row8 col4" >0</td>
+      <td id="T_11b77_row8_col5" class="data row8 col5" >0</td>
+      <td id="T_11b77_row8_col6" class="data row8 col6" >0</td>
+      <td id="T_11b77_row8_col7" class="data row8 col7" >0</td>
     </tr>
     <tr>
-      <th id="T_f6f6c_level0_row9" class="row_heading level0 row9" >Martin "Jonesy" WARD, A.</th>
-      <td id="T_f6f6c_row9_col0" class="data row9 col0" >582</td>
-      <td id="T_f6f6c_row9_col1" class="data row9 col1" >670</td>
-      <td id="T_f6f6c_row9_col2" class="data row9 col2" >0</td>
-      <td id="T_f6f6c_row9_col3" class="data row9 col3" >0</td>
-      <td id="T_f6f6c_row9_col4" class="data row9 col4" >0</td>
-      <td id="T_f6f6c_row9_col5" class="data row9 col5" >0</td>
-      <td id="T_f6f6c_row9_col6" class="data row9 col6" >0</td>
-      <td id="T_f6f6c_row9_col7" class="data row9 col7" >0</td>
+      <th id="T_11b77_level0_row9" class="row_heading level0 row9" >Martin "Jonesy" WARD, A.</th>
+      <td id="T_11b77_row9_col0" class="data row9 col0" >582</td>
+      <td id="T_11b77_row9_col1" class="data row9 col1" >670</td>
+      <td id="T_11b77_row9_col2" class="data row9 col2" >0</td>
+      <td id="T_11b77_row9_col3" class="data row9 col3" >0</td>
+      <td id="T_11b77_row9_col4" class="data row9 col4" >0</td>
+      <td id="T_11b77_row9_col5" class="data row9 col5" >0</td>
+      <td id="T_11b77_row9_col6" class="data row9 col6" >0</td>
+      <td id="T_11b77_row9_col7" class="data row9 col7" >0</td>
     </tr>
     <tr>
-      <th id="T_f6f6c_level0_row10" class="row_heading level0 row10" >David O'REILLY, NON-P.</th>
-      <td id="T_f6f6c_row10_col0" class="data row10 col0" >246</td>
-      <td id="T_f6f6c_row10_col1" class="data row10 col1" >0</td>
-      <td id="T_f6f6c_row10_col2" class="data row10 col2" >0</td>
-      <td id="T_f6f6c_row10_col3" class="data row10 col3" >0</td>
-      <td id="T_f6f6c_row10_col4" class="data row10 col4" >0</td>
-      <td id="T_f6f6c_row10_col5" class="data row10 col5" >0</td>
-      <td id="T_f6f6c_row10_col6" class="data row10 col6" >0</td>
-      <td id="T_f6f6c_row10_col7" class="data row10 col7" >0</td>
+      <th id="T_11b77_level0_row10" class="row_heading level0 row10" >David O'REILLY, NON-P.</th>
+      <td id="T_11b77_row10_col0" class="data row10 col0" >246</td>
+      <td id="T_11b77_row10_col1" class="data row10 col1" >0</td>
+      <td id="T_11b77_row10_col2" class="data row10 col2" >0</td>
+      <td id="T_11b77_row10_col3" class="data row10 col3" >0</td>
+      <td id="T_11b77_row10_col4" class="data row10 col4" >0</td>
+      <td id="T_11b77_row10_col5" class="data row10 col5" >0</td>
+      <td id="T_11b77_row10_col6" class="data row10 col6" >0</td>
+      <td id="T_11b77_row10_col7" class="data row10 col7" >0</td>
     </tr>
     <tr>
-      <th id="T_f6f6c_level0_row11" class="row_heading level0 row11" >Deaglán MAC CANNA, R.I.</th>
-      <td id="T_f6f6c_row11_col0" class="data row11 col0" >126</td>
-      <td id="T_f6f6c_row11_col1" class="data row11 col1" >0</td>
-      <td id="T_f6f6c_row11_col2" class="data row11 col2" >0</td>
-      <td id="T_f6f6c_row11_col3" class="data row11 col3" >0</td>
-      <td id="T_f6f6c_row11_col4" class="data row11 col4" >0</td>
-      <td id="T_f6f6c_row11_col5" class="data row11 col5" >0</td>
-      <td id="T_f6f6c_row11_col6" class="data row11 col6" >0</td>
-      <td id="T_f6f6c_row11_col7" class="data row11 col7" >0</td>
+      <th id="T_11b77_level0_row11" class="row_heading level0 row11" >Deaglán MAC CANNA, R.I.</th>
+      <td id="T_11b77_row11_col0" class="data row11 col0" >126</td>
+      <td id="T_11b77_row11_col1" class="data row11 col1" >0</td>
+      <td id="T_11b77_row11_col2" class="data row11 col2" >0</td>
+      <td id="T_11b77_row11_col3" class="data row11 col3" >0</td>
+      <td id="T_11b77_row11_col4" class="data row11 col4" >0</td>
+      <td id="T_11b77_row11_col5" class="data row11 col5" >0</td>
+      <td id="T_11b77_row11_col6" class="data row11 col6" >0</td>
+      <td id="T_11b77_row11_col7" class="data row11 col7" >0</td>
     </tr>
   </tbody>
 </table>
 </div></div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">charter</span><span class="p">(</span><span class="n">count_details</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-53e33748155048cb968fa8a4d0b71337"></div>
+<div id="altair-viz-11cddc69ce66468a964daa1a613d6c4d"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-53e33748155048cb968fa8a4d0b71337") {
-      outputDiv = document.getElementById("altair-viz-53e33748155048cb968fa8a4d0b71337");
+    if (outputDiv.id !== "altair-viz-11cddc69ce66468a964daa1a613d6c4d") {
+      outputDiv = document.getElementById("altair-viz-11cddc69ce66468a964daa1a613d6c4d");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1327,194 +1396,200 @@ document.write(`
 <h2>Dublin South Central, 2020<a class="headerlink" href="#dublin-south-central-2020" title="Permalink to this heading">#</a></h2>
 <p>Dublin South Central is unique in that, of the 79 constituencies surveyed across 2016 and 2020, Dublin South Central 2020 is the only constituency to return two TDs who were outside the top four candidates on the first count. The reason is the huge transfer that Bríd Smith and Joan Collins enjoyed from the distribution of Aengus Ó Snodaigh’s huge quota, just short of a surplus in itself.</p>
 <p>The question is: were Catherine Byrne and Catherine Ardagh transfer-toxic, or was it their low first-count vote that did for them?</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_details</span> <span class="o">=</span> <span class="n">get_count_details</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">2020</span><span class="p">][</span><span class="s1">&#39;count&#39;</span><span class="p">],</span> <span class="mi">16</span><span class="p">)</span>
 <span class="n">count_details</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">background_gradient</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;RdYlGn&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_57ea2_row0_col0, #T_57ea2_row0_col2, #T_57ea2_row0_col3, #T_57ea2_row0_col4, #T_57ea2_row0_col5, #T_57ea2_row3_col1, #T_57ea2_row3_col2, #T_57ea2_row3_col3, #T_57ea2_row3_col4, #T_57ea2_row3_col5 {
+#T_9e327_row0_col0, #T_9e327_row0_col2, #T_9e327_row0_col3, #T_9e327_row0_col4, #T_9e327_row0_col5, #T_9e327_row3_col1, #T_9e327_row3_col2, #T_9e327_row3_col3, #T_9e327_row3_col4, #T_9e327_row3_col5 {
   background-color: #006837;
   color: #f1f1f1;
 }
-#T_57ea2_row0_col1 {
+#T_9e327_row0_col1 {
   background-color: #17934e;
   color: #f1f1f1;
 }
-#T_57ea2_row1_col0 {
+#T_9e327_row1_col0 {
   background-color: #fcaa5f;
   color: #000000;
 }
-#T_57ea2_row1_col1, #T_57ea2_row4_col3 {
+#T_9e327_row1_col1, #T_9e327_row4_col3 {
   background-color: #eff8aa;
   color: #000000;
 }
-#T_57ea2_row1_col2 {
+#T_9e327_row1_col2 {
   background-color: #daf08d;
   color: #000000;
 }
-#T_57ea2_row1_col3 {
+#T_9e327_row1_col3 {
   background-color: #d5ed88;
   color: #000000;
 }
-#T_57ea2_row1_col4 {
+#T_9e327_row1_col4 {
   background-color: #b5df74;
   color: #000000;
 }
-#T_57ea2_row1_col5 {
+#T_9e327_row1_col5 {
   background-color: #39a758;
   color: #f1f1f1;
 }
-#T_57ea2_row2_col0, #T_57ea2_row3_col0 {
+#T_9e327_row2_col0, #T_9e327_row3_col0 {
   background-color: #fba05b;
   color: #000000;
 }
-#T_57ea2_row2_col1 {
+#T_9e327_row2_col1 {
   background-color: #f7fcb4;
   color: #000000;
 }
-#T_57ea2_row2_col2 {
+#T_9e327_row2_col2 {
   background-color: #e2f397;
   color: #000000;
 }
-#T_57ea2_row2_col3 {
+#T_9e327_row2_col3 {
   background-color: #d9ef8b;
   color: #000000;
 }
-#T_57ea2_row2_col4 {
+#T_9e327_row2_col4 {
   background-color: #c1e57b;
   color: #000000;
 }
-#T_57ea2_row2_col5, #T_57ea2_row6_col4, #T_57ea2_row6_col5, #T_57ea2_row7_col4, #T_57ea2_row7_col5, #T_57ea2_row8_col3, #T_57ea2_row8_col4, #T_57ea2_row8_col5, #T_57ea2_row9_col3, #T_57ea2_row9_col4, #T_57ea2_row9_col5, #T_57ea2_row10_col3, #T_57ea2_row10_col4, #T_57ea2_row10_col5, #T_57ea2_row11_col0, #T_57ea2_row11_col3, #T_57ea2_row11_col4, #T_57ea2_row11_col5, #T_57ea2_row12_col0, #T_57ea2_row12_col1, #T_57ea2_row12_col2, #T_57ea2_row12_col3, #T_57ea2_row12_col4, #T_57ea2_row12_col5 {
+#T_9e327_row2_col5, #T_9e327_row6_col4, #T_9e327_row6_col5, #T_9e327_row7_col4, #T_9e327_row7_col5, #T_9e327_row8_col3, #T_9e327_row8_col4, #T_9e327_row8_col5, #T_9e327_row9_col3, #T_9e327_row9_col4, #T_9e327_row9_col5, #T_9e327_row10_col3, #T_9e327_row10_col4, #T_9e327_row10_col5, #T_9e327_row11_col0, #T_9e327_row11_col3, #T_9e327_row11_col4, #T_9e327_row11_col5, #T_9e327_row12_col0, #T_9e327_row12_col1, #T_9e327_row12_col2, #T_9e327_row12_col3, #T_9e327_row12_col4, #T_9e327_row12_col5 {
   background-color: #a50026;
   color: #f1f1f1;
 }
-#T_57ea2_row4_col0 {
+#T_9e327_row4_col0 {
   background-color: #f7844e;
   color: #f1f1f1;
 }
-#T_57ea2_row4_col1 {
+#T_9e327_row4_col1 {
   background-color: #fff3ac;
   color: #000000;
 }
-#T_57ea2_row4_col2 {
+#T_9e327_row4_col2 {
   background-color: #f8fcb6;
   color: #000000;
 }
-#T_57ea2_row4_col4 {
+#T_9e327_row4_col4 {
   background-color: #66bd63;
   color: #f1f1f1;
 }
-#T_57ea2_row4_col5 {
+#T_9e327_row4_col5 {
   background-color: #026c39;
   color: #f1f1f1;
 }
-#T_57ea2_row5_col0 {
+#T_9e327_row5_col0 {
   background-color: #ea5739;
   color: #f1f1f1;
 }
-#T_57ea2_row5_col1 {
+#T_9e327_row5_col1 {
   background-color: #fff7b2;
   color: #000000;
 }
-#T_57ea2_row5_col2 {
+#T_9e327_row5_col2 {
   background-color: #dff293;
   color: #000000;
 }
-#T_57ea2_row5_col3 {
+#T_9e327_row5_col3 {
   background-color: #c3e67d;
   color: #000000;
 }
-#T_57ea2_row5_col4 {
+#T_9e327_row5_col4 {
   background-color: #7ac665;
   color: #000000;
 }
-#T_57ea2_row5_col5 {
+#T_9e327_row5_col5 {
   background-color: #199750;
   color: #f1f1f1;
 }
-#T_57ea2_row6_col0 {
+#T_9e327_row6_col0 {
   background-color: #dd3d2d;
   color: #f1f1f1;
 }
-#T_57ea2_row6_col1 {
+#T_9e327_row6_col1 {
   background-color: #f8864f;
   color: #f1f1f1;
 }
-#T_57ea2_row6_col2 {
+#T_9e327_row6_col2 {
   background-color: #fa9857;
   color: #000000;
 }
-#T_57ea2_row6_col3 {
+#T_9e327_row6_col3 {
   background-color: #fca55d;
   color: #000000;
 }
-#T_57ea2_row7_col0 {
+#T_9e327_row7_col0 {
   background-color: #d22b27;
   color: #f1f1f1;
 }
-#T_57ea2_row7_col1 {
+#T_9e327_row7_col1 {
   background-color: #f36b42;
   color: #f1f1f1;
 }
-#T_57ea2_row7_col2 {
+#T_9e327_row7_col2 {
   background-color: #f67c4a;
   color: #f1f1f1;
 }
-#T_57ea2_row7_col3 {
+#T_9e327_row7_col3 {
   background-color: #f98e52;
   color: #f1f1f1;
 }
-#T_57ea2_row8_col0 {
+#T_9e327_row8_col0 {
   background-color: #b50f26;
   color: #f1f1f1;
 }
-#T_57ea2_row8_col1 {
+#T_9e327_row8_col1 {
   background-color: #ca2427;
   color: #f1f1f1;
 }
-#T_57ea2_row8_col2 {
+#T_9e327_row8_col2 {
   background-color: #ce2827;
   color: #f1f1f1;
 }
-#T_57ea2_row9_col0 {
+#T_9e327_row9_col0 {
   background-color: #a90426;
   color: #f1f1f1;
 }
-#T_57ea2_row9_col1 {
+#T_9e327_row9_col1 {
   background-color: #b71126;
   color: #f1f1f1;
 }
-#T_57ea2_row9_col2 {
+#T_9e327_row9_col2 {
   background-color: #be1827;
   color: #f1f1f1;
 }
-#T_57ea2_row10_col0, #T_57ea2_row11_col1, #T_57ea2_row11_col2 {
+#T_9e327_row10_col0, #T_9e327_row11_col1, #T_9e327_row11_col2 {
   background-color: #a70226;
   color: #f1f1f1;
 }
-#T_57ea2_row10_col1 {
+#T_9e327_row10_col1 {
   background-color: #ad0826;
   color: #f1f1f1;
 }
-#T_57ea2_row10_col2 {
+#T_9e327_row10_col2 {
   background-color: #af0926;
   color: #f1f1f1;
 }
 </style>
-<table id="T_57ea2">
+<table id="T_9e327">
   <thead>
     <tr>
       <th class="index_name level0" >Count Number</th>
-      <th id="T_57ea2_level0_col0" class="col_heading level0 col0" >1</th>
-      <th id="T_57ea2_level0_col1" class="col_heading level0 col1" >2</th>
-      <th id="T_57ea2_level0_col2" class="col_heading level0 col2" >3</th>
-      <th id="T_57ea2_level0_col3" class="col_heading level0 col3" >4</th>
-      <th id="T_57ea2_level0_col4" class="col_heading level0 col4" >5</th>
-      <th id="T_57ea2_level0_col5" class="col_heading level0 col5" >6</th>
+      <th id="T_9e327_level0_col0" class="col_heading level0 col0" >1</th>
+      <th id="T_9e327_level0_col1" class="col_heading level0 col1" >2</th>
+      <th id="T_9e327_level0_col2" class="col_heading level0 col2" >3</th>
+      <th id="T_9e327_level0_col3" class="col_heading level0 col3" >4</th>
+      <th id="T_9e327_level0_col4" class="col_heading level0 col4" >5</th>
+      <th id="T_9e327_level0_col5" class="col_heading level0 col5" >6</th>
     </tr>
     <tr>
       <th class="index_name level0" >Candidate</th>
@@ -1528,141 +1603,147 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th id="T_57ea2_level0_row0" class="row_heading level0 row0" >*Aengus Ó'Snodaigh, S.F.</th>
-      <td id="T_57ea2_row0_col0" class="data row0 col0" >17015</td>
-      <td id="T_57ea2_row0_col1" class="data row0 col1" >8659</td>
-      <td id="T_57ea2_row0_col2" class="data row0 col2" >8659</td>
-      <td id="T_57ea2_row0_col3" class="data row0 col3" >8659</td>
-      <td id="T_57ea2_row0_col4" class="data row0 col4" >8659</td>
-      <td id="T_57ea2_row0_col5" class="data row0 col5" >8659</td>
+      <th id="T_9e327_level0_row0" class="row_heading level0 row0" >*Aengus Ó'Snodaigh, S.F.</th>
+      <td id="T_9e327_row0_col0" class="data row0 col0" >17015</td>
+      <td id="T_9e327_row0_col1" class="data row0 col1" >8659</td>
+      <td id="T_9e327_row0_col2" class="data row0 col2" >8659</td>
+      <td id="T_9e327_row0_col3" class="data row0 col3" >8659</td>
+      <td id="T_9e327_row0_col4" class="data row0 col4" >8659</td>
+      <td id="T_9e327_row0_col5" class="data row0 col5" >8659</td>
     </tr>
     <tr>
-      <th id="T_57ea2_level0_row1" class="row_heading level0 row1" >Catherine Byrne, F.G.</th>
-      <td id="T_57ea2_row1_col0" class="data row1 col0" >5078</td>
-      <td id="T_57ea2_row1_col1" class="data row1 col1" >5192</td>
-      <td id="T_57ea2_row1_col2" class="data row1 col2" >5202</td>
-      <td id="T_57ea2_row1_col3" class="data row1 col3" >5275</td>
-      <td id="T_57ea2_row1_col4" class="data row1 col4" >5788</td>
-      <td id="T_57ea2_row1_col5" class="data row1 col5" >7431</td>
+      <th id="T_9e327_level0_row1" class="row_heading level0 row1" >Catherine Byrne, F.G.</th>
+      <td id="T_9e327_row1_col0" class="data row1 col0" >5078</td>
+      <td id="T_9e327_row1_col1" class="data row1 col1" >5192</td>
+      <td id="T_9e327_row1_col2" class="data row1 col2" >5202</td>
+      <td id="T_9e327_row1_col3" class="data row1 col3" >5275</td>
+      <td id="T_9e327_row1_col4" class="data row1 col4" >5788</td>
+      <td id="T_9e327_row1_col5" class="data row1 col5" >7431</td>
     </tr>
     <tr>
-      <th id="T_57ea2_level0_row2" class="row_heading level0 row2" >Catherine Ardagh, F.F.</th>
-      <td id="T_57ea2_row2_col0" class="data row2 col0" >4782</td>
-      <td id="T_57ea2_row2_col1" class="data row2 col1" >5013</td>
-      <td id="T_57ea2_row2_col2" class="data row2 col2" >5030</td>
-      <td id="T_57ea2_row2_col3" class="data row2 col3" >5184</td>
-      <td id="T_57ea2_row2_col4" class="data row2 col4" >5598</td>
-      <td id="T_57ea2_row2_col5" class="data row2 col5" >0</td>
+      <th id="T_9e327_level0_row2" class="row_heading level0 row2" >Catherine Ardagh, F.F.</th>
+      <td id="T_9e327_row2_col0" class="data row2 col0" >4782</td>
+      <td id="T_9e327_row2_col1" class="data row2 col1" >5013</td>
+      <td id="T_9e327_row2_col2" class="data row2 col2" >5030</td>
+      <td id="T_9e327_row2_col3" class="data row2 col3" >5184</td>
+      <td id="T_9e327_row2_col4" class="data row2 col4" >5598</td>
+      <td id="T_9e327_row2_col5" class="data row2 col5" >0</td>
     </tr>
     <tr>
-      <th id="T_57ea2_level0_row3" class="row_heading level0 row3" >*Bríd Smith, S.P.B.P.</th>
-      <td id="T_57ea2_row3_col0" class="data row3 col0" >4753</td>
-      <td id="T_57ea2_row3_col1" class="data row3 col1" >9547</td>
-      <td id="T_57ea2_row3_col2" class="data row3 col2" >8659</td>
-      <td id="T_57ea2_row3_col3" class="data row3 col3" >8659</td>
-      <td id="T_57ea2_row3_col4" class="data row3 col4" >8659</td>
-      <td id="T_57ea2_row3_col5" class="data row3 col5" >8659</td>
+      <th id="T_9e327_level0_row3" class="row_heading level0 row3" >*Bríd Smith, S.P.B.P.</th>
+      <td id="T_9e327_row3_col0" class="data row3 col0" >4753</td>
+      <td id="T_9e327_row3_col1" class="data row3 col1" >9547</td>
+      <td id="T_9e327_row3_col2" class="data row3 col2" >8659</td>
+      <td id="T_9e327_row3_col3" class="data row3 col3" >8659</td>
+      <td id="T_9e327_row3_col4" class="data row3 col4" >8659</td>
+      <td id="T_9e327_row3_col5" class="data row3 col5" >8659</td>
     </tr>
     <tr>
-      <th id="T_57ea2_level0_row4" class="row_heading level0 row4" >*Patrick Costello, G.P.</th>
-      <td id="T_57ea2_row4_col0" class="data row4 col0" >4041</td>
-      <td id="T_57ea2_row4_col1" class="data row4 col1" >4449</td>
-      <td id="T_57ea2_row4_col2" class="data row4 col2" >4522</td>
-      <td id="T_57ea2_row4_col3" class="data row4 col3" >4698</td>
-      <td id="T_57ea2_row4_col4" class="data row4 col4" >6917</td>
-      <td id="T_57ea2_row4_col5" class="data row4 col5" >8582</td>
+      <th id="T_9e327_level0_row4" class="row_heading level0 row4" >*Patrick Costello, G.P.</th>
+      <td id="T_9e327_row4_col0" class="data row4 col0" >4041</td>
+      <td id="T_9e327_row4_col1" class="data row4 col1" >4449</td>
+      <td id="T_9e327_row4_col2" class="data row4 col2" >4522</td>
+      <td id="T_9e327_row4_col3" class="data row4 col3" >4698</td>
+      <td id="T_9e327_row4_col4" class="data row4 col4" >6917</td>
+      <td id="T_9e327_row4_col5" class="data row4 col5" >8582</td>
     </tr>
     <tr>
-      <th id="T_57ea2_level0_row5" class="row_heading level0 row5" >*Joan Collins, I.4.C.</th>
-      <td id="T_57ea2_row5_col0" class="data row5 col0" >2831</td>
-      <td id="T_57ea2_row5_col1" class="data row5 col1" >4578</td>
-      <td id="T_57ea2_row5_col2" class="data row5 col2" >5076</td>
-      <td id="T_57ea2_row5_col3" class="data row5 col3" >5552</td>
-      <td id="T_57ea2_row5_col4" class="data row5 col4" >6654</td>
-      <td id="T_57ea2_row5_col5" class="data row5 col5" >7807</td>
+      <th id="T_9e327_level0_row5" class="row_heading level0 row5" >*Joan Collins, I.4.C.</th>
+      <td id="T_9e327_row5_col0" class="data row5 col0" >2831</td>
+      <td id="T_9e327_row5_col1" class="data row5 col1" >4578</td>
+      <td id="T_9e327_row5_col2" class="data row5 col2" >5076</td>
+      <td id="T_9e327_row5_col3" class="data row5 col3" >5552</td>
+      <td id="T_9e327_row5_col4" class="data row5 col4" >6654</td>
+      <td id="T_9e327_row5_col5" class="data row5 col5" >7807</td>
     </tr>
     <tr>
-      <th id="T_57ea2_level0_row6" class="row_heading level0 row6" >Rebecca Moynihan, LAB.</th>
-      <td id="T_57ea2_row6_col0" class="data row6 col0" >2095</td>
-      <td id="T_57ea2_row6_col1" class="data row6 col1" >2330</td>
-      <td id="T_57ea2_row6_col2" class="data row6 col2" >2375</td>
-      <td id="T_57ea2_row6_col3" class="data row6 col3" >2491</td>
-      <td id="T_57ea2_row6_col4" class="data row6 col4" >0</td>
-      <td id="T_57ea2_row6_col5" class="data row6 col5" >0</td>
+      <th id="T_9e327_level0_row6" class="row_heading level0 row6" >Rebecca Moynihan, LAB.</th>
+      <td id="T_9e327_row6_col0" class="data row6 col0" >2095</td>
+      <td id="T_9e327_row6_col1" class="data row6 col1" >2330</td>
+      <td id="T_9e327_row6_col2" class="data row6 col2" >2375</td>
+      <td id="T_9e327_row6_col3" class="data row6 col3" >2491</td>
+      <td id="T_9e327_row6_col4" class="data row6 col4" >0</td>
+      <td id="T_9e327_row6_col5" class="data row6 col5" >0</td>
     </tr>
     <tr>
-      <th id="T_57ea2_level0_row7" class="row_heading level0 row7" >Tara Deacy, S.D.</th>
-      <td id="T_57ea2_row7_col0" class="data row7 col0" >1595</td>
-      <td id="T_57ea2_row7_col1" class="data row7 col1" >1921</td>
-      <td id="T_57ea2_row7_col2" class="data row7 col2" >2006</td>
-      <td id="T_57ea2_row7_col3" class="data row7 col3" >2181</td>
-      <td id="T_57ea2_row7_col4" class="data row7 col4" >0</td>
-      <td id="T_57ea2_row7_col5" class="data row7 col5" >0</td>
+      <th id="T_9e327_level0_row7" class="row_heading level0 row7" >Tara Deacy, S.D.</th>
+      <td id="T_9e327_row7_col0" class="data row7 col0" >1595</td>
+      <td id="T_9e327_row7_col1" class="data row7 col1" >1921</td>
+      <td id="T_9e327_row7_col2" class="data row7 col2" >2006</td>
+      <td id="T_9e327_row7_col3" class="data row7 col3" >2181</td>
+      <td id="T_9e327_row7_col4" class="data row7 col4" >0</td>
+      <td id="T_9e327_row7_col5" class="data row7 col5" >0</td>
     </tr>
     <tr>
-      <th id="T_57ea2_level0_row8" class="row_heading level0 row8" >Serina Ervine, T.N.P.A.P.N.</th>
-      <td id="T_57ea2_row8_col0" class="data row8 col0" >632</td>
-      <td id="T_57ea2_row8_col1" class="data row8 col1" >770</td>
-      <td id="T_57ea2_row8_col2" class="data row8 col2" >801</td>
-      <td id="T_57ea2_row8_col3" class="data row8 col3" >0</td>
-      <td id="T_57ea2_row8_col4" class="data row8 col4" >0</td>
-      <td id="T_57ea2_row8_col5" class="data row8 col5" >0</td>
+      <th id="T_9e327_level0_row8" class="row_heading level0 row8" >Serina Ervine, T.N.P.A.P.N.</th>
+      <td id="T_9e327_row8_col0" class="data row8 col0" >632</td>
+      <td id="T_9e327_row8_col1" class="data row8 col1" >770</td>
+      <td id="T_9e327_row8_col2" class="data row8 col2" >801</td>
+      <td id="T_9e327_row8_col3" class="data row8 col3" >0</td>
+      <td id="T_9e327_row8_col4" class="data row8 col4" >0</td>
+      <td id="T_9e327_row8_col5" class="data row8 col5" >0</td>
     </tr>
     <tr>
-      <th id="T_57ea2_level0_row9" class="row_heading level0 row9" >Richard Murray, NON-P.</th>
-      <td id="T_57ea2_row9_col0" class="data row9 col0" >207</td>
-      <td id="T_57ea2_row9_col1" class="data row9 col1" >420</td>
-      <td id="T_57ea2_row9_col2" class="data row9 col2" >512</td>
-      <td id="T_57ea2_row9_col3" class="data row9 col3" >0</td>
-      <td id="T_57ea2_row9_col4" class="data row9 col4" >0</td>
-      <td id="T_57ea2_row9_col5" class="data row9 col5" >0</td>
+      <th id="T_9e327_level0_row9" class="row_heading level0 row9" >Richard Murray, NON-P.</th>
+      <td id="T_9e327_row9_col0" class="data row9 col0" >207</td>
+      <td id="T_9e327_row9_col1" class="data row9 col1" >420</td>
+      <td id="T_9e327_row9_col2" class="data row9 col2" >512</td>
+      <td id="T_9e327_row9_col3" class="data row9 col3" >0</td>
+      <td id="T_9e327_row9_col4" class="data row9 col4" >0</td>
+      <td id="T_9e327_row9_col5" class="data row9 col5" >0</td>
     </tr>
     <tr>
-      <th id="T_57ea2_level0_row10" class="row_heading level0 row10" >Alan Kerrigan, NON-P.</th>
-      <td id="T_57ea2_row10_col0" class="data row10 col0" >146</td>
-      <td id="T_57ea2_row10_col1" class="data row10 col1" >241</td>
-      <td id="T_57ea2_row10_col2" class="data row10 col2" >257</td>
-      <td id="T_57ea2_row10_col3" class="data row10 col3" >0</td>
-      <td id="T_57ea2_row10_col4" class="data row10 col4" >0</td>
-      <td id="T_57ea2_row10_col5" class="data row10 col5" >0</td>
+      <th id="T_9e327_level0_row10" class="row_heading level0 row10" >Alan Kerrigan, NON-P.</th>
+      <td id="T_9e327_row10_col0" class="data row10 col0" >146</td>
+      <td id="T_9e327_row10_col1" class="data row10 col1" >241</td>
+      <td id="T_9e327_row10_col2" class="data row10 col2" >257</td>
+      <td id="T_9e327_row10_col3" class="data row10 col3" >0</td>
+      <td id="T_9e327_row10_col4" class="data row10 col4" >0</td>
+      <td id="T_9e327_row10_col5" class="data row10 col5" >0</td>
     </tr>
     <tr>
-      <th id="T_57ea2_level0_row11" class="row_heading level0 row11" >Robert Foley, NON-P.</th>
-      <td id="T_57ea2_row11_col0" class="data row11 col0" >78</td>
-      <td id="T_57ea2_row11_col1" class="data row11 col1" >114</td>
-      <td id="T_57ea2_row11_col2" class="data row11 col2" >121</td>
-      <td id="T_57ea2_row11_col3" class="data row11 col3" >0</td>
-      <td id="T_57ea2_row11_col4" class="data row11 col4" >0</td>
-      <td id="T_57ea2_row11_col5" class="data row11 col5" >0</td>
+      <th id="T_9e327_level0_row11" class="row_heading level0 row11" >Robert Foley, NON-P.</th>
+      <td id="T_9e327_row11_col0" class="data row11 col0" >78</td>
+      <td id="T_9e327_row11_col1" class="data row11 col1" >114</td>
+      <td id="T_9e327_row11_col2" class="data row11 col2" >121</td>
+      <td id="T_9e327_row11_col3" class="data row11 col3" >0</td>
+      <td id="T_9e327_row11_col4" class="data row11 col4" >0</td>
+      <td id="T_9e327_row11_col5" class="data row11 col5" >0</td>
     </tr>
     <tr>
-      <th id="T_57ea2_level0_row12" class="row_heading level0 row12" >Sean O'Leary, NON-P.</th>
-      <td id="T_57ea2_row12_col0" class="data row12 col0" >38</td>
-      <td id="T_57ea2_row12_col1" class="data row12 col1" >57</td>
-      <td id="T_57ea2_row12_col2" class="data row12 col2" >71</td>
-      <td id="T_57ea2_row12_col3" class="data row12 col3" >0</td>
-      <td id="T_57ea2_row12_col4" class="data row12 col4" >0</td>
-      <td id="T_57ea2_row12_col5" class="data row12 col5" >0</td>
+      <th id="T_9e327_level0_row12" class="row_heading level0 row12" >Sean O'Leary, NON-P.</th>
+      <td id="T_9e327_row12_col0" class="data row12 col0" >38</td>
+      <td id="T_9e327_row12_col1" class="data row12 col1" >57</td>
+      <td id="T_9e327_row12_col2" class="data row12 col2" >71</td>
+      <td id="T_9e327_row12_col3" class="data row12 col3" >0</td>
+      <td id="T_9e327_row12_col4" class="data row12 col4" >0</td>
+      <td id="T_9e327_row12_col5" class="data row12 col5" >0</td>
     </tr>
   </tbody>
 </table>
 </div></div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">charter</span><span class="p">(</span><span class="n">count_details</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-8f27600bf6a24022af78521176c11682"></div>
+<div id="altair-viz-d0a99252858a45a3bf3bc3a39c029f96"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-8f27600bf6a24022af78521176c11682") {
-      outputDiv = document.getElementById("altair-viz-8f27600bf6a24022af78521176c11682");
+    if (outputDiv.id !== "altair-viz-d0a99252858a45a3bf3bc3a39c029f96") {
+      outputDiv = document.getElementById("altair-viz-d0a99252858a45a3bf3bc3a39c029f96");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1715,158 +1796,164 @@ document.write(`
 <section id="dublin-rathdown-2016">
 <h2>Dublin Rathdown, 2016<a class="headerlink" href="#dublin-rathdown-2016" title="Permalink to this heading">#</a></h2>
 <p>The elimination of Mary White saw over two thousand votes transfer to Catherine Martin of the Greens and only six-hundred odd to former Minister for Justice Alan Shatter. That was the end of him.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_details</span> <span class="o">=</span> <span class="n">get_count_details</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">2016</span><span class="p">][</span><span class="s1">&#39;count&#39;</span><span class="p">],</span> <span class="mi">18</span><span class="p">)</span>
 <span class="n">count_details</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">background_gradient</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;RdYlGn&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_386da_row0_col0, #T_386da_row0_col1, #T_386da_row0_col2, #T_386da_row0_col3, #T_386da_row0_col4, #T_386da_row0_col5 {
+#T_d922c_row0_col0, #T_d922c_row0_col1, #T_d922c_row0_col2, #T_d922c_row0_col3, #T_d922c_row0_col4, #T_d922c_row0_col5 {
   background-color: #006837;
   color: #f1f1f1;
 }
-#T_386da_row1_col0 {
+#T_d922c_row1_col0 {
   background-color: #d1ec86;
   color: #000000;
 }
-#T_386da_row1_col1 {
+#T_d922c_row1_col1 {
   background-color: #bbe278;
   color: #000000;
 }
-#T_386da_row1_col2 {
+#T_d922c_row1_col2 {
   background-color: #abdb6d;
   color: #000000;
 }
-#T_386da_row1_col3 {
+#T_d922c_row1_col3 {
   background-color: #a5d86a;
   color: #000000;
 }
-#T_386da_row1_col4 {
+#T_d922c_row1_col4 {
   background-color: #54b45f;
   color: #f1f1f1;
 }
-#T_386da_row1_col5 {
+#T_d922c_row1_col5 {
   background-color: #16914d;
   color: #f1f1f1;
 }
-#T_386da_row2_col0 {
+#T_d922c_row2_col0 {
   background-color: #f4fab0;
   color: #000000;
 }
-#T_386da_row2_col1 {
+#T_d922c_row2_col1 {
   background-color: #e2f397;
   color: #000000;
 }
-#T_386da_row2_col2 {
+#T_d922c_row2_col2 {
   background-color: #daf08d;
   color: #000000;
 }
-#T_386da_row2_col3 {
+#T_d922c_row2_col3 {
   background-color: #d7ee8a;
   color: #000000;
 }
-#T_386da_row2_col4 {
+#T_d922c_row2_col4 {
   background-color: #89cc67;
   color: #000000;
 }
-#T_386da_row2_col5 {
+#T_d922c_row2_col5 {
   background-color: #5db961;
   color: #f1f1f1;
 }
-#T_386da_row3_col0 {
+#T_d922c_row3_col0 {
   background-color: #fdc574;
   color: #000000;
 }
-#T_386da_row3_col1, #T_386da_row4_col1 {
+#T_d922c_row3_col1, #T_d922c_row4_col1 {
   background-color: #fee593;
   color: #000000;
 }
-#T_386da_row3_col2 {
+#T_d922c_row3_col2 {
   background-color: #fff2aa;
   color: #000000;
 }
-#T_386da_row3_col3 {
+#T_d922c_row3_col3 {
   background-color: #fffebe;
   color: #000000;
 }
-#T_386da_row3_col4 {
+#T_d922c_row3_col4 {
   background-color: #f5fbb2;
   color: #000000;
 }
-#T_386da_row3_col5, #T_386da_row5_col4, #T_386da_row5_col5, #T_386da_row6_col3, #T_386da_row6_col4, #T_386da_row6_col5, #T_386da_row7_col2, #T_386da_row7_col3, #T_386da_row7_col4, #T_386da_row7_col5, #T_386da_row8_col0, #T_386da_row8_col1, #T_386da_row8_col2, #T_386da_row8_col3, #T_386da_row8_col4, #T_386da_row8_col5 {
+#T_d922c_row3_col5, #T_d922c_row5_col4, #T_d922c_row5_col5, #T_d922c_row6_col3, #T_d922c_row6_col4, #T_d922c_row6_col5, #T_d922c_row7_col2, #T_d922c_row7_col3, #T_d922c_row7_col4, #T_d922c_row7_col5, #T_d922c_row8_col0, #T_d922c_row8_col1, #T_d922c_row8_col2, #T_d922c_row8_col3, #T_d922c_row8_col4, #T_d922c_row8_col5 {
   background-color: #a50026;
   color: #f1f1f1;
 }
-#T_386da_row4_col0 {
+#T_d922c_row4_col0 {
   background-color: #fdbf6f;
   color: #000000;
 }
-#T_386da_row4_col2 {
+#T_d922c_row4_col2 {
   background-color: #fff3ac;
   color: #000000;
 }
-#T_386da_row4_col3 {
+#T_d922c_row4_col3 {
   background-color: #ddf191;
   color: #000000;
 }
-#T_386da_row4_col4 {
+#T_d922c_row4_col4 {
   background-color: #a7d96b;
   color: #000000;
 }
-#T_386da_row4_col5 {
+#T_d922c_row4_col5 {
   background-color: #18954f;
   color: #f1f1f1;
 }
-#T_386da_row5_col0 {
+#T_d922c_row5_col0 {
   background-color: #fdbb6c;
   color: #000000;
 }
-#T_386da_row5_col1 {
+#T_d922c_row5_col1 {
   background-color: #fedc88;
   color: #000000;
 }
-#T_386da_row5_col2 {
+#T_d922c_row5_col2 {
   background-color: #fee28f;
   color: #000000;
 }
-#T_386da_row5_col3 {
+#T_d922c_row5_col3 {
   background-color: #fee999;
   color: #000000;
 }
-#T_386da_row6_col0 {
+#T_d922c_row6_col0 {
   background-color: #f36b42;
   color: #f1f1f1;
 }
-#T_386da_row6_col1 {
+#T_d922c_row6_col1 {
   background-color: #fba05b;
   color: #000000;
 }
-#T_386da_row6_col2 {
+#T_d922c_row6_col2 {
   background-color: #fcaa5f;
   color: #000000;
 }
-#T_386da_row7_col0 {
+#T_d922c_row7_col0 {
   background-color: #d93429;
   color: #f1f1f1;
 }
-#T_386da_row7_col1 {
+#T_d922c_row7_col1 {
   background-color: #f57748;
   color: #f1f1f1;
 }
 </style>
-<table id="T_386da">
+<table id="T_d922c">
   <thead>
     <tr>
       <th class="index_name level0" >Count Number</th>
-      <th id="T_386da_level0_col0" class="col_heading level0 col0" >1</th>
-      <th id="T_386da_level0_col1" class="col_heading level0 col1" >2</th>
-      <th id="T_386da_level0_col2" class="col_heading level0 col2" >3</th>
-      <th id="T_386da_level0_col3" class="col_heading level0 col3" >4</th>
-      <th id="T_386da_level0_col4" class="col_heading level0 col4" >5</th>
-      <th id="T_386da_level0_col5" class="col_heading level0 col5" >6</th>
+      <th id="T_d922c_level0_col0" class="col_heading level0 col0" >1</th>
+      <th id="T_d922c_level0_col1" class="col_heading level0 col1" >2</th>
+      <th id="T_d922c_level0_col2" class="col_heading level0 col2" >3</th>
+      <th id="T_d922c_level0_col3" class="col_heading level0 col3" >4</th>
+      <th id="T_d922c_level0_col4" class="col_heading level0 col4" >5</th>
+      <th id="T_d922c_level0_col5" class="col_heading level0 col5" >6</th>
     </tr>
     <tr>
       <th class="index_name level0" >Candidate</th>
@@ -1880,105 +1967,111 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th id="T_386da_level0_row0" class="row_heading level0 row0" >*Shane Ross, NON-P.</th>
-      <td id="T_386da_row0_col0" class="data row0 col0" >10202</td>
-      <td id="T_386da_row0_col1" class="data row0 col1" >10411</td>
-      <td id="T_386da_row0_col2" class="data row0 col2" >10411</td>
-      <td id="T_386da_row0_col3" class="data row0 col3" >10411</td>
-      <td id="T_386da_row0_col4" class="data row0 col4" >10411</td>
-      <td id="T_386da_row0_col5" class="data row0 col5" >10411</td>
+      <th id="T_d922c_level0_row0" class="row_heading level0 row0" >*Shane Ross, NON-P.</th>
+      <td id="T_d922c_row0_col0" class="data row0 col0" >10202</td>
+      <td id="T_d922c_row0_col1" class="data row0 col1" >10411</td>
+      <td id="T_d922c_row0_col2" class="data row0 col2" >10411</td>
+      <td id="T_d922c_row0_col3" class="data row0 col3" >10411</td>
+      <td id="T_d922c_row0_col4" class="data row0 col4" >10411</td>
+      <td id="T_d922c_row0_col5" class="data row0 col5" >10411</td>
     </tr>
     <tr>
-      <th id="T_386da_level0_row1" class="row_heading level0 row1" >*Josepha Madigan, F.G.</th>
-      <td id="T_386da_row1_col0" class="data row1 col0" >6668</td>
-      <td id="T_386da_row1_col1" class="data row1 col1" >6835</td>
-      <td id="T_386da_row1_col2" class="data row1 col2" >7180</td>
-      <td id="T_386da_row1_col3" class="data row1 col3" >7290</td>
-      <td id="T_386da_row1_col4" class="data row1 col4" >8579</td>
-      <td id="T_386da_row1_col5" class="data row1 col5" >9488</td>
+      <th id="T_d922c_level0_row1" class="row_heading level0 row1" >*Josepha Madigan, F.G.</th>
+      <td id="T_d922c_row1_col0" class="data row1 col0" >6668</td>
+      <td id="T_d922c_row1_col1" class="data row1 col1" >6835</td>
+      <td id="T_d922c_row1_col2" class="data row1 col2" >7180</td>
+      <td id="T_d922c_row1_col3" class="data row1 col3" >7290</td>
+      <td id="T_d922c_row1_col4" class="data row1 col4" >8579</td>
+      <td id="T_d922c_row1_col5" class="data row1 col5" >9488</td>
     </tr>
     <tr>
-      <th id="T_386da_level0_row2" class="row_heading level0 row2" >Alan Shatter, F.G.</th>
-      <td id="T_386da_row2_col0" class="data row2 col0" >5905</td>
-      <td id="T_386da_row2_col1" class="data row2 col1" >5979</td>
-      <td id="T_386da_row2_col2" class="data row2 col2" >6195</td>
-      <td id="T_386da_row2_col3" class="data row2 col3" >6268</td>
-      <td id="T_386da_row2_col4" class="data row2 col4" >7745</td>
-      <td id="T_386da_row2_col5" class="data row2 col5" >8444</td>
+      <th id="T_d922c_level0_row2" class="row_heading level0 row2" >Alan Shatter, F.G.</th>
+      <td id="T_d922c_row2_col0" class="data row2 col0" >5905</td>
+      <td id="T_d922c_row2_col1" class="data row2 col1" >5979</td>
+      <td id="T_d922c_row2_col2" class="data row2 col2" >6195</td>
+      <td id="T_d922c_row2_col3" class="data row2 col3" >6268</td>
+      <td id="T_d922c_row2_col4" class="data row2 col4" >7745</td>
+      <td id="T_d922c_row2_col5" class="data row2 col5" >8444</td>
     </tr>
     <tr>
-      <th id="T_386da_level0_row3" class="row_heading level0 row3" >Mary White, F.F.</th>
-      <td id="T_386da_row3_col0" class="data row3 col0" >4220</td>
-      <td id="T_386da_row3_col1" class="data row3 col1" >4325</td>
-      <td id="T_386da_row3_col2" class="data row3 col2" >4761</td>
-      <td id="T_386da_row3_col3" class="data row3 col3" >5165</td>
-      <td id="T_386da_row3_col4" class="data row3 col4" >5463</td>
-      <td id="T_386da_row3_col5" class="data row3 col5" >0</td>
+      <th id="T_d922c_level0_row3" class="row_heading level0 row3" >Mary White, F.F.</th>
+      <td id="T_d922c_row3_col0" class="data row3 col0" >4220</td>
+      <td id="T_d922c_row3_col1" class="data row3 col1" >4325</td>
+      <td id="T_d922c_row3_col2" class="data row3 col2" >4761</td>
+      <td id="T_d922c_row3_col3" class="data row3 col3" >5165</td>
+      <td id="T_d922c_row3_col4" class="data row3 col4" >5463</td>
+      <td id="T_d922c_row3_col5" class="data row3 col5" >0</td>
     </tr>
     <tr>
-      <th id="T_386da_level0_row4" class="row_heading level0 row4" >*Catherine Martin, G.P.</th>
-      <td id="T_386da_row4_col0" class="data row4 col0" >4122</td>
-      <td id="T_386da_row4_col1" class="data row4 col1" >4314</td>
-      <td id="T_386da_row4_col2" class="data row4 col2" >4812</td>
-      <td id="T_386da_row4_col3" class="data row4 col3" >6105</td>
-      <td id="T_386da_row4_col4" class="data row4 col4" >7255</td>
-      <td id="T_386da_row4_col5" class="data row4 col5" >9421</td>
+      <th id="T_d922c_level0_row4" class="row_heading level0 row4" >*Catherine Martin, G.P.</th>
+      <td id="T_d922c_row4_col0" class="data row4 col0" >4122</td>
+      <td id="T_d922c_row4_col1" class="data row4 col1" >4314</td>
+      <td id="T_d922c_row4_col2" class="data row4 col2" >4812</td>
+      <td id="T_d922c_row4_col3" class="data row4 col3" >6105</td>
+      <td id="T_d922c_row4_col4" class="data row4 col4" >7255</td>
+      <td id="T_d922c_row4_col5" class="data row4 col5" >9421</td>
     </tr>
     <tr>
-      <th id="T_386da_level0_row5" class="row_heading level0 row5" >Alex White, LAB.</th>
-      <td id="T_386da_row5_col0" class="data row5 col0" >4048</td>
-      <td id="T_386da_row5_col1" class="data row5 col1" >4080</td>
-      <td id="T_386da_row5_col2" class="data row5 col2" >4258</td>
-      <td id="T_386da_row5_col3" class="data row5 col3" >4436</td>
-      <td id="T_386da_row5_col4" class="data row5 col4" >0</td>
-      <td id="T_386da_row5_col5" class="data row5 col5" >0</td>
+      <th id="T_d922c_level0_row5" class="row_heading level0 row5" >Alex White, LAB.</th>
+      <td id="T_d922c_row5_col0" class="data row5 col0" >4048</td>
+      <td id="T_d922c_row5_col1" class="data row5 col1" >4080</td>
+      <td id="T_d922c_row5_col2" class="data row5 col2" >4258</td>
+      <td id="T_d922c_row5_col3" class="data row5 col3" >4436</td>
+      <td id="T_d922c_row5_col4" class="data row5 col4" >0</td>
+      <td id="T_d922c_row5_col5" class="data row5 col5" >0</td>
     </tr>
     <tr>
-      <th id="T_386da_level0_row6" class="row_heading level0 row6" >Sorcha Nic Cormaic, S.F.</th>
-      <td id="T_386da_row6_col0" class="data row6 col0" >2858</td>
-      <td id="T_386da_row6_col1" class="data row6 col1" >2896</td>
-      <td id="T_386da_row6_col2" class="data row6 col2" >3076</td>
-      <td id="T_386da_row6_col3" class="data row6 col3" >0</td>
-      <td id="T_386da_row6_col4" class="data row6 col4" >0</td>
-      <td id="T_386da_row6_col5" class="data row6 col5" >0</td>
+      <th id="T_d922c_level0_row6" class="row_heading level0 row6" >Sorcha Nic Cormaic, S.F.</th>
+      <td id="T_d922c_row6_col0" class="data row6 col0" >2858</td>
+      <td id="T_d922c_row6_col1" class="data row6 col1" >2896</td>
+      <td id="T_d922c_row6_col2" class="data row6 col2" >3076</td>
+      <td id="T_d922c_row6_col3" class="data row6 col3" >0</td>
+      <td id="T_d922c_row6_col4" class="data row6 col4" >0</td>
+      <td id="T_d922c_row6_col5" class="data row6 col5" >0</td>
     </tr>
     <tr>
-      <th id="T_386da_level0_row7" class="row_heading level0 row7" >Peter Mathews, NON-P.</th>
-      <td id="T_386da_row7_col0" class="data row7 col0" >2021</td>
-      <td id="T_386da_row7_col1" class="data row7 col1" >2241</td>
-      <td id="T_386da_row7_col2" class="data row7 col2" >0</td>
-      <td id="T_386da_row7_col3" class="data row7 col3" >0</td>
-      <td id="T_386da_row7_col4" class="data row7 col4" >0</td>
-      <td id="T_386da_row7_col5" class="data row7 col5" >0</td>
+      <th id="T_d922c_level0_row7" class="row_heading level0 row7" >Peter Mathews, NON-P.</th>
+      <td id="T_d922c_row7_col0" class="data row7 col0" >2021</td>
+      <td id="T_d922c_row7_col1" class="data row7 col1" >2241</td>
+      <td id="T_d922c_row7_col2" class="data row7 col2" >0</td>
+      <td id="T_d922c_row7_col3" class="data row7 col3" >0</td>
+      <td id="T_d922c_row7_col4" class="data row7 col4" >0</td>
+      <td id="T_d922c_row7_col5" class="data row7 col5" >0</td>
     </tr>
     <tr>
-      <th id="T_386da_level0_row8" class="row_heading level0 row8" >Alan Daveron, R.I.</th>
-      <td id="T_386da_row8_col0" class="data row8 col0" >1055</td>
-      <td id="T_386da_row8_col1" class="data row8 col1" >0</td>
-      <td id="T_386da_row8_col2" class="data row8 col2" >0</td>
-      <td id="T_386da_row8_col3" class="data row8 col3" >0</td>
-      <td id="T_386da_row8_col4" class="data row8 col4" >0</td>
-      <td id="T_386da_row8_col5" class="data row8 col5" >0</td>
+      <th id="T_d922c_level0_row8" class="row_heading level0 row8" >Alan Daveron, R.I.</th>
+      <td id="T_d922c_row8_col0" class="data row8 col0" >1055</td>
+      <td id="T_d922c_row8_col1" class="data row8 col1" >0</td>
+      <td id="T_d922c_row8_col2" class="data row8 col2" >0</td>
+      <td id="T_d922c_row8_col3" class="data row8 col3" >0</td>
+      <td id="T_d922c_row8_col4" class="data row8 col4" >0</td>
+      <td id="T_d922c_row8_col5" class="data row8 col5" >0</td>
     </tr>
   </tbody>
 </table>
 </div></div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">charter</span><span class="p">(</span><span class="n">count_details</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-75dd92312cce4a53be97f3d8becdd8ea"></div>
+<div id="altair-viz-6044df533b5743a3868951da3f99aec3"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-75dd92312cce4a53be97f3d8becdd8ea") {
-      outputDiv = document.getElementById("altair-viz-75dd92312cce4a53be97f3d8becdd8ea");
+    if (outputDiv.id !== "altair-viz-6044df533b5743a3868951da3f99aec3") {
+      outputDiv = document.getElementById("altair-viz-6044df533b5743a3868951da3f99aec3");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -2031,200 +2124,206 @@ document.write(`
 <section id="dublin-rathdown-2020">
 <h2>Dublin Rathdown, 2020<a class="headerlink" href="#dublin-rathdown-2020" title="Permalink to this heading">#</a></h2>
 <p>Four years later, the natural order was restored. The first three in the first count all sailed home on calm seas.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_details</span> <span class="o">=</span> <span class="n">get_count_details</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">2020</span><span class="p">][</span><span class="s1">&#39;count&#39;</span><span class="p">],</span> <span class="mi">18</span><span class="p">)</span>
 <span class="n">count_details</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">background_gradient</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;RdYlGn&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_91c24_row0_col0, #T_91c24_row0_col1, #T_91c24_row0_col2, #T_91c24_row0_col3, #T_91c24_row0_col4, #T_91c24_row0_col5, #T_91c24_row0_col6, #T_91c24_row0_col7 {
+#T_7147e_row0_col0, #T_7147e_row0_col1, #T_7147e_row0_col2, #T_7147e_row0_col3, #T_7147e_row0_col4, #T_7147e_row0_col5, #T_7147e_row0_col6, #T_7147e_row0_col7 {
   background-color: #006837;
   color: #f1f1f1;
 }
-#T_91c24_row1_col0 {
+#T_7147e_row1_col0 {
   background-color: #89cc67;
   color: #000000;
 }
-#T_91c24_row1_col1 {
+#T_7147e_row1_col1 {
   background-color: #8ccd67;
   color: #000000;
 }
-#T_91c24_row1_col2 {
+#T_7147e_row1_col2 {
   background-color: #93d168;
   color: #000000;
 }
-#T_91c24_row1_col3 {
+#T_7147e_row1_col3 {
   background-color: #a7d96b;
   color: #000000;
 }
-#T_91c24_row1_col4 {
+#T_7147e_row1_col4 {
   background-color: #bfe47a;
   color: #000000;
 }
-#T_91c24_row1_col5, #T_91c24_row2_col6 {
+#T_7147e_row1_col5, #T_7147e_row2_col6 {
   background-color: #7fc866;
   color: #000000;
 }
-#T_91c24_row1_col6 {
+#T_7147e_row1_col6 {
   background-color: #42ac5a;
   color: #f1f1f1;
 }
-#T_91c24_row1_col7 {
+#T_7147e_row1_col7 {
   background-color: #15904c;
   color: #f1f1f1;
 }
-#T_91c24_row2_col0, #T_91c24_row2_col1 {
+#T_7147e_row2_col0, #T_7147e_row2_col1 {
   background-color: #9dd569;
   color: #000000;
 }
-#T_91c24_row2_col2 {
+#T_7147e_row2_col2 {
   background-color: #a5d86a;
   color: #000000;
 }
-#T_91c24_row2_col3, #T_91c24_row4_col6 {
+#T_7147e_row2_col3, #T_7147e_row4_col6 {
   background-color: #b7e075;
   color: #000000;
 }
-#T_91c24_row2_col4 {
+#T_7147e_row2_col4 {
   background-color: #d5ed88;
   color: #000000;
 }
-#T_91c24_row2_col5 {
+#T_7147e_row2_col5 {
   background-color: #addc6f;
   color: #000000;
 }
-#T_91c24_row2_col7 {
+#T_7147e_row2_col7 {
   background-color: #57b65f;
   color: #f1f1f1;
 }
-#T_91c24_row3_col0 {
+#T_7147e_row3_col0 {
   background-color: #f2faae;
   color: #000000;
 }
-#T_91c24_row3_col1 {
+#T_7147e_row3_col1 {
   background-color: #eef8a8;
   color: #000000;
 }
-#T_91c24_row3_col2 {
+#T_7147e_row3_col2 {
   background-color: #f1f9ac;
   color: #000000;
 }
-#T_91c24_row3_col3 {
+#T_7147e_row3_col3 {
   background-color: #e2f397;
   color: #000000;
 }
-#T_91c24_row3_col4 {
+#T_7147e_row3_col4 {
   background-color: #f5fbb2;
   color: #000000;
 }
-#T_91c24_row3_col5 {
+#T_7147e_row3_col5 {
   background-color: #e3f399;
   color: #000000;
 }
-#T_91c24_row3_col6 {
+#T_7147e_row3_col6 {
   background-color: #c7e77f;
   color: #000000;
 }
-#T_91c24_row3_col7, #T_91c24_row5_col5, #T_91c24_row5_col6, #T_91c24_row5_col7, #T_91c24_row6_col4, #T_91c24_row6_col5, #T_91c24_row6_col6, #T_91c24_row6_col7, #T_91c24_row7_col3, #T_91c24_row7_col4, #T_91c24_row7_col5, #T_91c24_row7_col6, #T_91c24_row7_col7, #T_91c24_row8_col2, #T_91c24_row8_col3, #T_91c24_row8_col4, #T_91c24_row8_col5, #T_91c24_row8_col6, #T_91c24_row8_col7, #T_91c24_row9_col1, #T_91c24_row9_col2, #T_91c24_row9_col3, #T_91c24_row9_col4, #T_91c24_row9_col5, #T_91c24_row9_col6, #T_91c24_row9_col7, #T_91c24_row10_col0, #T_91c24_row10_col1, #T_91c24_row10_col2, #T_91c24_row10_col3, #T_91c24_row10_col4, #T_91c24_row10_col5, #T_91c24_row10_col6, #T_91c24_row10_col7 {
+#T_7147e_row3_col7, #T_7147e_row5_col5, #T_7147e_row5_col6, #T_7147e_row5_col7, #T_7147e_row6_col4, #T_7147e_row6_col5, #T_7147e_row6_col6, #T_7147e_row6_col7, #T_7147e_row7_col3, #T_7147e_row7_col4, #T_7147e_row7_col5, #T_7147e_row7_col6, #T_7147e_row7_col7, #T_7147e_row8_col2, #T_7147e_row8_col3, #T_7147e_row8_col4, #T_7147e_row8_col5, #T_7147e_row8_col6, #T_7147e_row8_col7, #T_7147e_row9_col1, #T_7147e_row9_col2, #T_7147e_row9_col3, #T_7147e_row9_col4, #T_7147e_row9_col5, #T_7147e_row9_col6, #T_7147e_row9_col7, #T_7147e_row10_col0, #T_7147e_row10_col1, #T_7147e_row10_col2, #T_7147e_row10_col3, #T_7147e_row10_col4, #T_7147e_row10_col5, #T_7147e_row10_col6, #T_7147e_row10_col7 {
   background-color: #a50026;
   color: #f1f1f1;
 }
-#T_91c24_row4_col0 {
+#T_7147e_row4_col0 {
   background-color: #fffbb8;
   color: #000000;
 }
-#T_91c24_row4_col1 {
+#T_7147e_row4_col1 {
   background-color: #e9f6a1;
   color: #000000;
 }
-#T_91c24_row4_col2 {
+#T_7147e_row4_col2 {
   background-color: #ddf191;
   color: #000000;
 }
-#T_91c24_row4_col3 {
+#T_7147e_row4_col3 {
   background-color: #e6f59d;
   color: #000000;
 }
-#T_91c24_row4_col4 {
+#T_7147e_row4_col4 {
   background-color: #f8fcb6;
   color: #000000;
 }
-#T_91c24_row4_col5 {
+#T_7147e_row4_col5 {
   background-color: #d7ee8a;
   color: #000000;
 }
-#T_91c24_row4_col7 {
+#T_7147e_row4_col7 {
   background-color: #73c264;
   color: #000000;
 }
-#T_91c24_row5_col0 {
+#T_7147e_row5_col0 {
   background-color: #feca79;
   color: #000000;
 }
-#T_91c24_row5_col1 {
+#T_7147e_row5_col1 {
   background-color: #fed481;
   color: #000000;
 }
-#T_91c24_row5_col2 {
+#T_7147e_row5_col2 {
   background-color: #feda86;
   color: #000000;
 }
-#T_91c24_row5_col3 {
+#T_7147e_row5_col3 {
   background-color: #fed683;
   color: #000000;
 }
-#T_91c24_row5_col4 {
+#T_7147e_row5_col4 {
   background-color: #fed07e;
   color: #000000;
 }
-#T_91c24_row6_col0 {
+#T_7147e_row6_col0 {
   background-color: #fdbd6d;
   color: #000000;
 }
-#T_91c24_row6_col1, #T_91c24_row6_col2, #T_91c24_row6_col3 {
+#T_7147e_row6_col1, #T_7147e_row6_col2, #T_7147e_row6_col3 {
   background-color: #fec877;
   color: #000000;
 }
-#T_91c24_row7_col0 {
+#T_7147e_row7_col0 {
   background-color: #e14430;
   color: #f1f1f1;
 }
-#T_91c24_row7_col1 {
+#T_7147e_row7_col1 {
   background-color: #ec5c3b;
   color: #f1f1f1;
 }
-#T_91c24_row7_col2 {
+#T_7147e_row7_col2 {
   background-color: #ed5f3c;
   color: #f1f1f1;
 }
-#T_91c24_row8_col0 {
+#T_7147e_row8_col0 {
   background-color: #dd3d2d;
   color: #f1f1f1;
 }
-#T_91c24_row8_col1 {
+#T_7147e_row8_col1 {
   background-color: #e75337;
   color: #f1f1f1;
 }
-#T_91c24_row9_col0 {
+#T_7147e_row9_col0 {
   background-color: #c21c27;
   color: #f1f1f1;
 }
 </style>
-<table id="T_91c24">
+<table id="T_7147e">
   <thead>
     <tr>
       <th class="index_name level0" >Count Number</th>
-      <th id="T_91c24_level0_col0" class="col_heading level0 col0" >1</th>
-      <th id="T_91c24_level0_col1" class="col_heading level0 col1" >2</th>
-      <th id="T_91c24_level0_col2" class="col_heading level0 col2" >3</th>
-      <th id="T_91c24_level0_col3" class="col_heading level0 col3" >4</th>
-      <th id="T_91c24_level0_col4" class="col_heading level0 col4" >5</th>
-      <th id="T_91c24_level0_col5" class="col_heading level0 col5" >6</th>
-      <th id="T_91c24_level0_col6" class="col_heading level0 col6" >7</th>
-      <th id="T_91c24_level0_col7" class="col_heading level0 col7" >8</th>
+      <th id="T_7147e_level0_col0" class="col_heading level0 col0" >1</th>
+      <th id="T_7147e_level0_col1" class="col_heading level0 col1" >2</th>
+      <th id="T_7147e_level0_col2" class="col_heading level0 col2" >3</th>
+      <th id="T_7147e_level0_col3" class="col_heading level0 col3" >4</th>
+      <th id="T_7147e_level0_col4" class="col_heading level0 col4" >5</th>
+      <th id="T_7147e_level0_col5" class="col_heading level0 col5" >6</th>
+      <th id="T_7147e_level0_col6" class="col_heading level0 col6" >7</th>
+      <th id="T_7147e_level0_col7" class="col_heading level0 col7" >8</th>
     </tr>
     <tr>
       <th class="index_name level0" >Candidate</th>
@@ -2240,145 +2339,151 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th id="T_91c24_level0_row0" class="row_heading level0 row0" >*Catherine Martin, G.P.</th>
-      <td id="T_91c24_row0_col0" class="data row0 col0" >8958</td>
-      <td id="T_91c24_row0_col1" class="data row0 col1" >9171</td>
-      <td id="T_91c24_row0_col2" class="data row0 col2" >9431</td>
-      <td id="T_91c24_row0_col3" class="data row0 col3" >9949</td>
-      <td id="T_91c24_row0_col4" class="data row0 col4" >11444</td>
-      <td id="T_91c24_row0_col5" class="data row0 col5" >11444</td>
-      <td id="T_91c24_row0_col6" class="data row0 col6" >10601</td>
-      <td id="T_91c24_row0_col7" class="data row0 col7" >10601</td>
+      <th id="T_7147e_level0_row0" class="row_heading level0 row0" >*Catherine Martin, G.P.</th>
+      <td id="T_7147e_row0_col0" class="data row0 col0" >8958</td>
+      <td id="T_7147e_row0_col1" class="data row0 col1" >9171</td>
+      <td id="T_7147e_row0_col2" class="data row0 col2" >9431</td>
+      <td id="T_7147e_row0_col3" class="data row0 col3" >9949</td>
+      <td id="T_7147e_row0_col4" class="data row0 col4" >11444</td>
+      <td id="T_7147e_row0_col5" class="data row0 col5" >11444</td>
+      <td id="T_7147e_row0_col6" class="data row0 col6" >10601</td>
+      <td id="T_7147e_row0_col7" class="data row0 col7" >10601</td>
     </tr>
     <tr>
-      <th id="T_91c24_level0_row1" class="row_heading level0 row1" >*Neale Richmond, F.G.</th>
-      <td id="T_91c24_row1_col0" class="data row1 col0" >6743</td>
-      <td id="T_91c24_row1_col1" class="data row1 col1" >6789</td>
-      <td id="T_91c24_row1_col2" class="data row1 col2" >6887</td>
-      <td id="T_91c24_row1_col3" class="data row1 col3" >6926</td>
-      <td id="T_91c24_row1_col4" class="data row1 col4" >7461</td>
-      <td id="T_91c24_row1_col5" class="data row1 col5" >8675</td>
-      <td id="T_91c24_row1_col6" class="data row1 col6" >8950</td>
-      <td id="T_91c24_row1_col7" class="data row1 col7" >9704</td>
+      <th id="T_7147e_level0_row1" class="row_heading level0 row1" >*Neale Richmond, F.G.</th>
+      <td id="T_7147e_row1_col0" class="data row1 col0" >6743</td>
+      <td id="T_7147e_row1_col1" class="data row1 col1" >6789</td>
+      <td id="T_7147e_row1_col2" class="data row1 col2" >6887</td>
+      <td id="T_7147e_row1_col3" class="data row1 col3" >6926</td>
+      <td id="T_7147e_row1_col4" class="data row1 col4" >7461</td>
+      <td id="T_7147e_row1_col5" class="data row1 col5" >8675</td>
+      <td id="T_7147e_row1_col6" class="data row1 col6" >8950</td>
+      <td id="T_7147e_row1_col7" class="data row1 col7" >9704</td>
     </tr>
     <tr>
-      <th id="T_91c24_level0_row2" class="row_heading level0 row2" >*Josepha Madigan, F.G.</th>
-      <td id="T_91c24_row2_col0" class="data row2 col0" >6482</td>
-      <td id="T_91c24_row2_col1" class="data row2 col1" >6555</td>
-      <td id="T_91c24_row2_col2" class="data row2 col2" >6603</td>
-      <td id="T_91c24_row2_col3" class="data row2 col3" >6624</td>
-      <td id="T_91c24_row2_col4" class="data row2 col4" >6964</td>
-      <td id="T_91c24_row2_col5" class="data row2 col5" >7835</td>
-      <td id="T_91c24_row2_col6" class="data row2 col6" >8065</td>
-      <td id="T_91c24_row2_col7" class="data row2 col7" >8677</td>
+      <th id="T_7147e_level0_row2" class="row_heading level0 row2" >*Josepha Madigan, F.G.</th>
+      <td id="T_7147e_row2_col0" class="data row2 col0" >6482</td>
+      <td id="T_7147e_row2_col1" class="data row2 col1" >6555</td>
+      <td id="T_7147e_row2_col2" class="data row2 col2" >6603</td>
+      <td id="T_7147e_row2_col3" class="data row2 col3" >6624</td>
+      <td id="T_7147e_row2_col4" class="data row2 col4" >6964</td>
+      <td id="T_7147e_row2_col5" class="data row2 col5" >7835</td>
+      <td id="T_7147e_row2_col6" class="data row2 col6" >8065</td>
+      <td id="T_7147e_row2_col7" class="data row2 col7" >8677</td>
     </tr>
     <tr>
-      <th id="T_91c24_level0_row3" class="row_heading level0 row3" >Sorcha Nic Cormaic Nic Cormaic, S.F.</th>
-      <td id="T_91c24_row3_col0" class="data row3 col0" >4926</td>
-      <td id="T_91c24_row3_col1" class="data row3 col1" >4980</td>
-      <td id="T_91c24_row3_col2" class="data row3 col2" >5082</td>
-      <td id="T_91c24_row3_col3" class="data row3 col3" >5716</td>
-      <td id="T_91c24_row3_col4" class="data row3 col4" >5991</td>
-      <td id="T_91c24_row3_col5" class="data row3 col5" >6538</td>
-      <td id="T_91c24_row3_col6" class="data row3 col6" >6726</td>
-      <td id="T_91c24_row3_col7" class="data row3 col7" >0</td>
+      <th id="T_7147e_level0_row3" class="row_heading level0 row3" >Sorcha Nic Cormaic Nic Cormaic, S.F.</th>
+      <td id="T_7147e_row3_col0" class="data row3 col0" >4926</td>
+      <td id="T_7147e_row3_col1" class="data row3 col1" >4980</td>
+      <td id="T_7147e_row3_col2" class="data row3 col2" >5082</td>
+      <td id="T_7147e_row3_col3" class="data row3 col3" >5716</td>
+      <td id="T_7147e_row3_col4" class="data row3 col4" >5991</td>
+      <td id="T_7147e_row3_col5" class="data row3 col5" >6538</td>
+      <td id="T_7147e_row3_col6" class="data row3 col6" >6726</td>
+      <td id="T_7147e_row3_col7" class="data row3 col7" >0</td>
     </tr>
     <tr>
-      <th id="T_91c24_level0_row4" class="row_heading level0 row4" >Shay Brennan, F.F.</th>
-      <td id="T_91c24_row4_col0" class="data row4 col0" >4549</td>
-      <td id="T_91c24_row4_col1" class="data row4 col1" >5118</td>
-      <td id="T_91c24_row4_col2" class="data row4 col2" >5532</td>
-      <td id="T_91c24_row4_col3" class="data row4 col3" >5599</td>
-      <td id="T_91c24_row4_col4" class="data row4 col4" >5913</td>
-      <td id="T_91c24_row4_col5" class="data row4 col5" >6904</td>
-      <td id="T_91c24_row4_col6" class="data row4 col6" >7054</td>
-      <td id="T_91c24_row4_col7" class="data row4 col7" >8277</td>
+      <th id="T_7147e_level0_row4" class="row_heading level0 row4" >Shay Brennan, F.F.</th>
+      <td id="T_7147e_row4_col0" class="data row4 col0" >4549</td>
+      <td id="T_7147e_row4_col1" class="data row4 col1" >5118</td>
+      <td id="T_7147e_row4_col2" class="data row4 col2" >5532</td>
+      <td id="T_7147e_row4_col3" class="data row4 col3" >5599</td>
+      <td id="T_7147e_row4_col4" class="data row4 col4" >5913</td>
+      <td id="T_7147e_row4_col5" class="data row4 col5" >6904</td>
+      <td id="T_7147e_row4_col6" class="data row4 col6" >7054</td>
+      <td id="T_7147e_row4_col7" class="data row4 col7" >8277</td>
     </tr>
     <tr>
-      <th id="T_91c24_level0_row5" class="row_heading level0 row5" >Shane Ross, NON-P.</th>
-      <td id="T_91c24_row5_col0" class="data row5 col0" >3419</td>
-      <td id="T_91c24_row5_col1" class="data row5 col1" >3474</td>
-      <td id="T_91c24_row5_col2" class="data row5 col2" >3651</td>
-      <td id="T_91c24_row5_col3" class="data row5 col3" >3780</td>
-      <td id="T_91c24_row5_col4" class="data row5 col4" >4215</td>
-      <td id="T_91c24_row5_col5" class="data row5 col5" >0</td>
-      <td id="T_91c24_row5_col6" class="data row5 col6" >0</td>
-      <td id="T_91c24_row5_col7" class="data row5 col7" >0</td>
+      <th id="T_7147e_level0_row5" class="row_heading level0 row5" >Shane Ross, NON-P.</th>
+      <td id="T_7147e_row5_col0" class="data row5 col0" >3419</td>
+      <td id="T_7147e_row5_col1" class="data row5 col1" >3474</td>
+      <td id="T_7147e_row5_col2" class="data row5 col2" >3651</td>
+      <td id="T_7147e_row5_col3" class="data row5 col3" >3780</td>
+      <td id="T_7147e_row5_col4" class="data row5 col4" >4215</td>
+      <td id="T_7147e_row5_col5" class="data row5 col5" >0</td>
+      <td id="T_7147e_row5_col6" class="data row5 col6" >0</td>
+      <td id="T_7147e_row5_col7" class="data row5 col7" >0</td>
     </tr>
     <tr>
-      <th id="T_91c24_level0_row6" class="row_heading level0 row6" >Lettie McCarthy, LAB.</th>
-      <td id="T_91c24_row6_col0" class="data row6 col0" >3179</td>
-      <td id="T_91c24_row6_col1" class="data row6 col1" >3242</td>
-      <td id="T_91c24_row6_col2" class="data row6 col2" >3328</td>
-      <td id="T_91c24_row6_col3" class="data row6 col3" >3519</td>
-      <td id="T_91c24_row6_col4" class="data row6 col4" >0</td>
-      <td id="T_91c24_row6_col5" class="data row6 col5" >0</td>
-      <td id="T_91c24_row6_col6" class="data row6 col6" >0</td>
-      <td id="T_91c24_row6_col7" class="data row6 col7" >0</td>
+      <th id="T_7147e_level0_row6" class="row_heading level0 row6" >Lettie McCarthy, LAB.</th>
+      <td id="T_7147e_row6_col0" class="data row6 col0" >3179</td>
+      <td id="T_7147e_row6_col1" class="data row6 col1" >3242</td>
+      <td id="T_7147e_row6_col2" class="data row6 col2" >3328</td>
+      <td id="T_7147e_row6_col3" class="data row6 col3" >3519</td>
+      <td id="T_7147e_row6_col4" class="data row6 col4" >0</td>
+      <td id="T_7147e_row6_col5" class="data row6 col5" >0</td>
+      <td id="T_7147e_row6_col6" class="data row6 col6" >0</td>
+      <td id="T_7147e_row6_col7" class="data row6 col7" >0</td>
     </tr>
     <tr>
-      <th id="T_91c24_level0_row7" class="row_heading level0 row7" >Eoghan Ó Ceannabháin, S.P.B.P.</th>
-      <td id="T_91c24_row7_col0" class="data row7 col0" >1498</td>
-      <td id="T_91c24_row7_col1" class="data row7 col1" >1597</td>
-      <td id="T_91c24_row7_col2" class="data row7 col2" >1680</td>
-      <td id="T_91c24_row7_col3" class="data row7 col3" >0</td>
-      <td id="T_91c24_row7_col4" class="data row7 col4" >0</td>
-      <td id="T_91c24_row7_col5" class="data row7 col5" >0</td>
-      <td id="T_91c24_row7_col6" class="data row7 col6" >0</td>
-      <td id="T_91c24_row7_col7" class="data row7 col7" >0</td>
+      <th id="T_7147e_level0_row7" class="row_heading level0 row7" >Eoghan Ó Ceannabháin, S.P.B.P.</th>
+      <td id="T_7147e_row7_col0" class="data row7 col0" >1498</td>
+      <td id="T_7147e_row7_col1" class="data row7 col1" >1597</td>
+      <td id="T_7147e_row7_col2" class="data row7 col2" >1680</td>
+      <td id="T_7147e_row7_col3" class="data row7 col3" >0</td>
+      <td id="T_7147e_row7_col4" class="data row7 col4" >0</td>
+      <td id="T_7147e_row7_col5" class="data row7 col5" >0</td>
+      <td id="T_7147e_row7_col6" class="data row7 col6" >0</td>
+      <td id="T_7147e_row7_col7" class="data row7 col7" >0</td>
     </tr>
     <tr>
-      <th id="T_91c24_level0_row8" class="row_heading level0 row8" >Liam Coughlan, A.</th>
-      <td id="T_91c24_row8_col0" class="data row8 col0" >1413</td>
-      <td id="T_91c24_row8_col1" class="data row8 col1" >1450</td>
-      <td id="T_91c24_row8_col2" class="data row8 col2" >0</td>
-      <td id="T_91c24_row8_col3" class="data row8 col3" >0</td>
-      <td id="T_91c24_row8_col4" class="data row8 col4" >0</td>
-      <td id="T_91c24_row8_col5" class="data row8 col5" >0</td>
-      <td id="T_91c24_row8_col6" class="data row8 col6" >0</td>
-      <td id="T_91c24_row8_col7" class="data row8 col7" >0</td>
+      <th id="T_7147e_level0_row8" class="row_heading level0 row8" >Liam Coughlan, A.</th>
+      <td id="T_7147e_row8_col0" class="data row8 col0" >1413</td>
+      <td id="T_7147e_row8_col1" class="data row8 col1" >1450</td>
+      <td id="T_7147e_row8_col2" class="data row8 col2" >0</td>
+      <td id="T_7147e_row8_col3" class="data row8 col3" >0</td>
+      <td id="T_7147e_row8_col4" class="data row8 col4" >0</td>
+      <td id="T_7147e_row8_col5" class="data row8 col5" >0</td>
+      <td id="T_7147e_row8_col6" class="data row8 col6" >0</td>
+      <td id="T_7147e_row8_col7" class="data row8 col7" >0</td>
     </tr>
     <tr>
-      <th id="T_91c24_level0_row9" class="row_heading level0 row9" >Deirdre Conroy, F.F.</th>
-      <td id="T_91c24_row9_col0" class="data row9 col0" >886</td>
-      <td id="T_91c24_row9_col1" class="data row9 col1" >0</td>
-      <td id="T_91c24_row9_col2" class="data row9 col2" >0</td>
-      <td id="T_91c24_row9_col3" class="data row9 col3" >0</td>
-      <td id="T_91c24_row9_col4" class="data row9 col4" >0</td>
-      <td id="T_91c24_row9_col5" class="data row9 col5" >0</td>
-      <td id="T_91c24_row9_col6" class="data row9 col6" >0</td>
-      <td id="T_91c24_row9_col7" class="data row9 col7" >0</td>
+      <th id="T_7147e_level0_row9" class="row_heading level0 row9" >Deirdre Conroy, F.F.</th>
+      <td id="T_7147e_row9_col0" class="data row9 col0" >886</td>
+      <td id="T_7147e_row9_col1" class="data row9 col1" >0</td>
+      <td id="T_7147e_row9_col2" class="data row9 col2" >0</td>
+      <td id="T_7147e_row9_col3" class="data row9 col3" >0</td>
+      <td id="T_7147e_row9_col4" class="data row9 col4" >0</td>
+      <td id="T_7147e_row9_col5" class="data row9 col5" >0</td>
+      <td id="T_7147e_row9_col6" class="data row9 col6" >0</td>
+      <td id="T_7147e_row9_col7" class="data row9 col7" >0</td>
     </tr>
     <tr>
-      <th id="T_91c24_level0_row10" class="row_heading level0 row10" >Patrick Noonan, NON-P.</th>
-      <td id="T_91c24_row10_col0" class="data row10 col0" >350</td>
-      <td id="T_91c24_row10_col1" class="data row10 col1" >0</td>
-      <td id="T_91c24_row10_col2" class="data row10 col2" >0</td>
-      <td id="T_91c24_row10_col3" class="data row10 col3" >0</td>
-      <td id="T_91c24_row10_col4" class="data row10 col4" >0</td>
-      <td id="T_91c24_row10_col5" class="data row10 col5" >0</td>
-      <td id="T_91c24_row10_col6" class="data row10 col6" >0</td>
-      <td id="T_91c24_row10_col7" class="data row10 col7" >0</td>
+      <th id="T_7147e_level0_row10" class="row_heading level0 row10" >Patrick Noonan, NON-P.</th>
+      <td id="T_7147e_row10_col0" class="data row10 col0" >350</td>
+      <td id="T_7147e_row10_col1" class="data row10 col1" >0</td>
+      <td id="T_7147e_row10_col2" class="data row10 col2" >0</td>
+      <td id="T_7147e_row10_col3" class="data row10 col3" >0</td>
+      <td id="T_7147e_row10_col4" class="data row10 col4" >0</td>
+      <td id="T_7147e_row10_col5" class="data row10 col5" >0</td>
+      <td id="T_7147e_row10_col6" class="data row10 col6" >0</td>
+      <td id="T_7147e_row10_col7" class="data row10 col7" >0</td>
     </tr>
   </tbody>
 </table>
 </div></div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">charter</span><span class="p">(</span><span class="n">count_details</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-645a982d33304348b991b2af8d7bfd9a"></div>
+<div id="altair-viz-75134faab9c94023a93834044276240e"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-645a982d33304348b991b2af8d7bfd9a") {
-      outputDiv = document.getElementById("altair-viz-645a982d33304348b991b2af8d7bfd9a");
+    if (outputDiv.id !== "altair-viz-75134faab9c94023a93834044276240e") {
+      outputDiv = document.getElementById("altair-viz-75134faab9c94023a93834044276240e");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",

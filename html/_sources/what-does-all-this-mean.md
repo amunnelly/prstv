@@ -63,5 +63,8 @@ There is a reluctance among some politicians to discuss or contemplate the secon
 
 <https://en.wikipedia.org/wiki/Single_transferable_vote>
 
+<https://www.theguardian.com/politics/blog/2011/feb/28/if-you-believe-pr-answer-ireland>
+
 ## Thank You
 
+I've been obsessing over elections for as long as I can remember, but I only started to get into them on the data side in recent years. The leading light in putting this sort of thing online and accessible to all is [Gavan Reilly of Today FM](https://twitter.com/gavreilly), and he was kind enough to permit me to use all the data he himself had studiously collected. It is to my own shame that the data was officially published on the Open Data Portal before I could use Gavan's. That said, I do remember the kindness, and acknowledge it greatly.
