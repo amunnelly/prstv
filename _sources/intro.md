@@ -1,10 +1,10 @@
-# Irish Elections are Not as Sophisticated as We Like to Think
+# Irish General Elections
 
 ## PR-STV in theory, first-past the post in practice
 
-### Transfers make little or no difference in nine out of ten cases.
+### Transfers make little or no difference in nine out of ten cases
 
-In Ireland, we pride ourselves on the sophistication of our electoral system. Ireland uses a system called Proportional Representation - Single Transferable Vote (PR-STV), which ensures that seats in the Oireachtas are distributed in proportion to the  electorate's distribution in terms of geography, ideology and demography.
+In Ireland, we pride ourselves on the sophistication of our electoral system. Ireland uses a system called PR-STV (Proportional Representation - Single Transferable Vote), which ensures that seats in the Oireachtas are distributed in proportion to the  electorate's distribution in terms of geography, ideology and demography.
 
 Or at least that's the theory. The full results of the last two general elections are available on the government's Open Data portal, https://data.gov.ie/, and these suggest that Irish general election are much closer to first-past-the-post elections than we realise, and that transfers are of little impact in general in deciding whom gets elected.
 
@@ -16,7 +16,7 @@ The General Election of February 8th, 2020, returned 159 TDs from 39 constituenc
 
 ## The Constituencies
 
-Seats per Constituency per Election
+### Seat Types per Election
 
 
 |seats|2016|2020|
@@ -25,7 +25,7 @@ Seats per Constituency per Election
 |four-seaters|15|16|
 |five-seaters|11|13|
 
-In Full
+### Seats per Constituency per Election
 
 |Constituency|GE 2016|GE 2020|
 |---|---:|---:|

@@ -10,7 +10,7 @@ It is interesting to note that only two countries use PR-STV to elect government
 
 So what to do? Stick, or twist?
 
-### The Case for the Current System
+## The Case for the Current System
 
 There are three main arguments in favour of the current system.
 
@@ -18,9 +18,9 @@ There are three main arguments in favour of the current system.
 2. The multi-seat nature of the constituencies means that small parties and areas far from the centre of power have a voice in parliament.
 3. Every vote counts. The thrilling nature of the counts at Irish elections, as candidates bubble up through the counts to snatch victory from the jaws of defeat, shows that every vote counts.
 
-### The Case Against the Current System
+## The Case Against the Current System
 
-There are refutations for the three arguments in favour, of course, but there are also three separate arguments against PR-STV itself. Not PR-STV in theory, where it's the best electoral system of any, but in the reality in which citizens live and die, and where the conditions of those lives are affected by those politicians elected to govern them. The arguments against PR-STV as it exists in Ireland are these.
+The arguments against PR-STV as it exists in Ireland are these.
 
 1. PR-STV voting encourages clientelism and parish-pump politics, where the local is prioritised at the expense of the national.
 2. Ireland is not a big enough country, in terms of population and / or geography, for local issues to tilt national decisions to the extent that they do.
@@ -65,6 +65,6 @@ There is a reluctance among some politicians to discuss or contemplate the secon
 
 <https://www.theguardian.com/politics/blog/2011/feb/28/if-you-believe-pr-answer-ireland>
 
-## Thank You
+## Acknowledgement
 
 I've been obsessing over elections for as long as I can remember, but I only started to get into them on the data side in recent years. The leading light in putting this sort of thing online and accessible to all is [Gavan Reilly of Today FM](https://twitter.com/gavreilly), and he was kind enough to permit me to use all the data he himself had studiously collected. It is to my own shame that the data was officially published on the Open Data Portal before I could use Gavan's. That said, I do remember the kindness, and acknowledge it greatly.
