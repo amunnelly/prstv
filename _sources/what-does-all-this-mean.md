@@ -26,7 +26,7 @@ There are refutations for the three arguments in favour, of course, but there ar
 2. Ireland is not a big enough country, in terms of population and / or geography, for local issues to tilt national decisions to the extent that they do.
 3. The data shows that every vote does not count. The evidence of the past two general elections (2020 and 2016) shows that Ireland's PR-STV electoral system is a first-past-the-post system for nine out of ten Teachtaí Dhála elected.
 
-## Alterntives to PR-STV
+## Alternatives to PR-STV
 
 Whenever doubts are raised about the suitability of PR-STV as an electoral system, proponents of the status quo always insist that PR-STV is better than the first-past-the-post system used in the UK. This is correct. What is not correct is to posit an either/or argument. That if PR-STV is done away with, first-past-the-post is the only alternative. There are many alternatives that retain the proportionality of PR-STV, but do away with the tempations of clientelism.
 
